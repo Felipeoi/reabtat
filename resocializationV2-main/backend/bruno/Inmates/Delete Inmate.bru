@@ -1,0 +1,21 @@
+meta {
+  name: Delete Inmate
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/api/inmates/{{inmateId}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+tests {
+  test("Status code is 200 or 204", function() {
+    expect([200, 204]).to.include(res.status);
+  });
+}

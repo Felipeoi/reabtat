@@ -1,0 +1,28 @@
+meta {
+  name: Update User
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/api/users/{{userId}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "name": "Updated User",
+    "email": "updated@example.com"
+  }
+}
+
+tests {
+  test("Status code is 200 or 204", function() {
+    expect([200, 204]).to.include(res.status);
+  });
+}

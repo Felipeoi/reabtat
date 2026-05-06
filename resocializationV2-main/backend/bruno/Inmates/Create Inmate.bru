@@ -1,0 +1,49 @@
+meta {
+  name: Create Inmate
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/inmates
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "custody": "12345",
+    "origin": {
+      "origin": "Presídio Central",
+      "uf_id": 1
+    },
+    "destination": {
+      "destination": "Presídio Regional",
+      "uf_id": 2
+    },
+    "responsible": {
+      "attorney": "Dr. João Advogado",
+      "phone": "+55 11 98765-4321"
+    }
+  }
+}
+
+tests {
+  test("Status code is 201", function() {
+    expect(res.status).to.equal(201);
+  });
+
+  test("Response has id", function() {
+    expect(res.body.id).to.be.a('number');
+  });
+}
+
+script:post-response {
+  if (res.status === 201) {
+    bru.setEnvVar("inmateId", res.body.id);
+  }
+}

@@ -1,0 +1,31 @@
+services:
+  # Backend API (Go)
+  - type: web
+    name: resocializacao-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: ./backend
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: PORT
+        value: 8080
+      - key: DB_DSN
+        sync: false  # você vai configurar manualmente no painel
+      - key: JWT_SECRET
+        generateValue: true  # gera automaticamente um secret seguro
+      - key: FRONTEND_URL
+        sync: false  # você vai adicionar a URL do frontend depois
+
+  # Frontend (React/Vite)
+  - type: web
+    name: resocializacao-frontend
+    runtime: node
+    rootDir: ./frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: VITE_API_URL
+        sync: false  # você vai adicionar a URL do backend depois

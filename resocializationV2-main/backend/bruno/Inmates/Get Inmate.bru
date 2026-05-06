@@ -1,0 +1,29 @@
+meta {
+  name: Get Inmate
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/inmates/{{inmateId}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+tests {
+  test("Status code is 200", function() {
+    expect(res.status).to.equal(200);
+  });
+
+  test("Response has inmate data", function() {
+    expect(res.body.id).to.equal(Number(bru.getEnvVar("inmateId")));
+    expect(res.body.custody).to.be.a('string');
+    expect(res.body.origin).to.be.an('object');
+    expect(res.body.destination).to.be.an('object');
+    expect(res.body.responsible).to.be.an('object');
+  });
+}

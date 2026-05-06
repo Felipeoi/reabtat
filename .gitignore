@@ -1,0 +1,5 @@
+.DS_Store
+*.zip
+
+# Local IDE / agent settings
+**/.claude/settings.local.json

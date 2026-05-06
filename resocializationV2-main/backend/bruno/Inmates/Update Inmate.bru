@@ -1,0 +1,44 @@
+meta {
+  name: Update Inmate
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/api/inmates/{{inmateId}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "custody": "12345-UPD",
+    "origin": {
+      "origin": "Presídio Central Atualizado",
+      "uf_id": 1
+    },
+    "destination": {
+      "destination": "Presídio Regional Atualizado",
+      "uf_id": 2
+    },
+    "responsible": {
+      "attorney": "Dr. João Advogado Jr.",
+      "phone": "+55 11 98765-0000"
+    }
+  }
+}
+
+tests {
+  test("Status code is 200", function() {
+    expect(res.status).to.equal(200);
+  });
+
+  test("Response has updated inmate data", function() {
+    expect(res.body.id).to.equal(Number(bru.getEnvVar("inmateId")));
+    expect(res.body.custody).to.equal("12345-UPD");
+  });
+}
