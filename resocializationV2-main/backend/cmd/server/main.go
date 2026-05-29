@@ -116,18 +116,10 @@ func main() {
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 
-	// CORS GLOBAL - Desenvolvimento + Produção
-	allowedOrigins := []string{
-		"http://localhost:5173",
-		"http://127.0.0.1:5173",
-		"http://localhost:3000",
-		"http://127.0.0.1:3000",
-		"http://localhost:5174",
-		"http://127.0.0.1:5174",
-	}
-	// Adiciona a URL do frontend de produção se configurada
-	if cfg.FrontendURL != "" && cfg.FrontendURL != "http://localhost:5173" {
-		allowedOrigins = append(allowedOrigins, cfg.FrontendURL)
+	// CORS: localhost sempre; produção via FRONTEND_URL (ex.: https://reabtat-production.up.railway.app)
+	allowedOrigins := corsAllowedOrigins(cfg.FrontendURL)
+	if cfg.Env == "production" {
+		log.Printf("[CORS] origens permitidas: %v", allowedOrigins)
 	}
 
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
@@ -177,6 +169,22 @@ func main() {
 	if err := e.Shutdown(shCtx); err != nil {
 		log.Printf("shutdown error: %v", err)
 	}
+}
+
+func corsAllowedOrigins(frontendURL string) []string {
+	allowed := []string{
+		"http://localhost:5173",
+		"http://127.0.0.1:5173",
+		"http://localhost:3000",
+		"http://127.0.0.1:3000",
+		"http://localhost:5174",
+		"http://127.0.0.1:5174",
+	}
+	u := strings.TrimRight(strings.TrimSpace(frontendURL), "/")
+	if u != "" && u != "http://localhost:5173" {
+		allowed = append(allowed, u)
+	}
+	return allowed
 }
 
 func maskDSN(dsn string) string {
