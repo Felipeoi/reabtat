@@ -34,7 +34,7 @@ export default function Inmates() {
   const loadUFs = async () => {
     try {
       const data = await apiListUFs();
-      setUfs(data);
+      setUfs(data ?? []);
     } catch (err: any) {
       console.error('Erro ao carregar UFs:', err);
     }
@@ -43,7 +43,7 @@ export default function Inmates() {
   const loadOriginCities = async (ufCode: string) => {
     try {
       const data = await apiListCities({ uf_code: ufCode });
-      setOriginCities(data);
+      setOriginCities(data ?? []);
     } catch (err: any) {
       console.error('Erro ao carregar cidades de origem:', err);
     }
@@ -52,7 +52,7 @@ export default function Inmates() {
   const loadDestinationCities = async (ufCode: string) => {
     try {
       const data = await apiListCities({ uf_code: ufCode });
-      setDestinationCities(data);
+      setDestinationCities(data ?? []);
     } catch (err: any) {
       console.error('Erro ao carregar cidades de destino:', err);
     }

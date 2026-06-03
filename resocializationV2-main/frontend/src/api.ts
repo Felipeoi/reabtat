@@ -14,6 +14,11 @@ class ApiError extends Error {
     }
 }
 
+/** Go serializa slice nil como JSON null em listas vazias. */
+function ensureArray<T>(data: unknown): T[] {
+    return Array.isArray(data) ? data : [];
+}
+
 async function request<T>(
     path: string,
     opts: { method?: string; body?: unknown; auth?: boolean } = {}
@@ -148,15 +153,19 @@ export const apiDeleteInmate = (id: number) =>
     request<void>(`/api/inmates/${id}`, { method: "DELETE", auth: true });
 
 /* UFS */
-export const apiListUFs = () =>
-    request<import("./types").UF[]>(`/api/ufs`, { auth: false });
+export const apiListUFs = async () =>
+    ensureArray<import("./types").UF>(
+        await request<import("./types").UF[]>(`/api/ufs`, { auth: false })
+    );
 
 /* CITIES */
-export const apiListCities = (params: { uf_code?: string } = {}) => {
+export const apiListCities = async (params: { uf_code?: string } = {}) => {
     const usp = new URLSearchParams();
     if (params.uf_code) usp.set("uf_code", params.uf_code);
     const q = usp.toString() ? `?${usp.toString()}` : "";
-    return request<import("./types").City[]>(`/api/cities${q}`, { auth: false });
+    return ensureArray<import("./types").City>(
+        await request<import("./types").City[]>(`/api/cities${q}`, { auth: false })
+    );
 };
 
 /* MATCHES */

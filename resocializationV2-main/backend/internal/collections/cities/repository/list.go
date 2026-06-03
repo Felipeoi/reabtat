@@ -35,7 +35,7 @@ func (r *ListRepo) Execute(ctx context.Context, ufCode string) ([]entity.City, e
 	}
 	defer rows.Close()
 
-	var result []entity.City
+	var result = make([]entity.City, 0)
 	for rows.Next() {
 		var city entity.City
 		if err := rows.Scan(&city.ID, &city.IBGECode, &city.Name, &city.UFCode); err != nil {
