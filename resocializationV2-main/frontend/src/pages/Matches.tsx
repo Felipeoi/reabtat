@@ -34,7 +34,7 @@ export default function Matches() {
   const getCustodyLabel = (custody: string) => {
     switch (custody) {
       case 'CLOSED': return 'Fechado';
-      case 'SEMI_OPEN': return 'Semi-Aberto';
+      case 'SEMI_OPEN': return 'Semiaberto';
       case 'OPEN': return 'Aberto';
       default: return custody;
     }

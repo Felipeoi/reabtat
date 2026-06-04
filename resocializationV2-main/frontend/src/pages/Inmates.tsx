@@ -189,7 +189,7 @@ export default function Inmates() {
                         {inmate.destination ? `${inmate.destination.name} - ${inmate.destination.uf_code}` : 'N/A'}
                       </td>
                       <td>
-                        {inmate.custody === 'CLOSED' ? 'Fechado' : inmate.custody === 'SEMI_OPEN' ? 'Semi-Aberto' : 'Aberto'}
+                        {inmate.custody === 'CLOSED' ? 'Fechado' : inmate.custody === 'SEMI_OPEN' ? 'Semiaberto' : 'Aberto'}
                       </td>
                       <td className="text-right">
                         <div className="table-actions">
@@ -257,7 +257,7 @@ export default function Inmates() {
               onChange={(e) => setFormData({ ...formData, custody: e.target.value as any })}
               options={[
                 { value: 'CLOSED', label: 'Fechado' },
-                { value: 'SEMI_OPEN', label: 'Semi-Aberto' },
+                { value: 'SEMI_OPEN', label: 'Semiaberto' },
                 { value: 'OPEN', label: 'Aberto' }
               ]}
             />
