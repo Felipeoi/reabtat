@@ -11,8 +11,6 @@ type ListRepo struct{ pool *pgxpool.Pool }
 
 func NewListRepo(pool *pgxpool.Pool) *ListRepo { return &ListRepo{pool: pool} }
 
-// Execute lista presos com paginação filtrando por user_id.
-// Se limit <= 0, usa 100. Se offset < 0, usa 0.
 func (r *ListRepo) Execute(ctx context.Context, limit, offset int, userID int64) (error, context.Context, []entity.InmatesList) {
 	if limit <= 0 || limit > 1000 {
 		limit = 100
@@ -28,63 +26,58 @@ func (r *ListRepo) Execute(ctx context.Context, limit, offset int, userID int64)
 	defer rows.Close()
 
 	out := make([]entity.InmatesList, 0, limit)
+	inmateIDs := make([]int, 0, limit)
+
 	for rows.Next() {
 		var (
-			id            int32
-			custody       string
-			originID      int32
-			destinationID int32
-			// Origin city
-			originCityID   int32
-			originIBGECode string
-			originName     string
-			originUFCode   string
-			// Destination city
-			destCityID   int32
-			destIBGECode string
-			destName     string
-			destUFCode   string
+			id               int32
+			custody          string
+			originUnitID     int32
+			originUnitIDJoin int32
+			originUnitName   string
+			originUnitUF     string
 		)
 
 		if err := rows.Scan(
 			&id,
 			&custody,
-			&originID,
-			&destinationID,
-			&originCityID,
-			&originIBGECode,
-			&originName,
-			&originUFCode,
-			&destCityID,
-			&destIBGECode,
-			&destName,
-			&destUFCode,
+			&originUnitID,
+			&originUnitIDJoin,
+			&originUnitName,
+			&originUnitUF,
 		); err != nil {
 			return err, ctx, nil
 		}
 
+		inmateIDs = append(inmateIDs, int(id))
 		out = append(out, entity.InmatesList{
-			Id:            int(id),
-			Custody:       custody,
-			OriginID:      int(originID),
-			DestinationID: int(destinationID),
-			Origin: &entity.City{
-				ID:       int(originCityID),
-				IBGECode: originIBGECode,
-				Name:     originName,
-				UFCode:   originUFCode,
-			},
-			Destination: &entity.City{
-				ID:       int(destCityID),
-				IBGECode: destIBGECode,
-				Name:     destName,
-				UFCode:   destUFCode,
+			Id:           int(id),
+			Custody:      custody,
+			OriginUnitID: int(originUnitID),
+			OriginUnit: &entity.PrisonUnit{
+				ID:     int(originUnitIDJoin),
+				Name:   originUnitName,
+				UFCode: originUnitUF,
 			},
 		})
 	}
 
 	if err := rows.Err(); err != nil {
 		return err, ctx, nil
+	}
+
+	destMap, err := LoadDestinationUnitsMap(ctx, r.pool, inmateIDs)
+	if err != nil {
+		return err, ctx, nil
+	}
+
+	for i := range out {
+		destUnits := destMap[out[i].Id]
+		if destUnits == nil {
+			destUnits = []entity.PrisonUnit{}
+		}
+		out[i].DestinationUnits = destUnits
+		out[i].DestinationUnitIDs = DestinationUnitIDs(destUnits)
 	}
 
 	return nil, ctx, out
@@ -94,13 +87,10 @@ var listInmatesSQL = `
 	SELECT
 	  i.id,
 	  i.custody,
-	  i.origin_id,
-	  i.destination_id,
-	  oc.id, oc.ibge_code, oc.name, oc.uf_code,
-	  dc.id, dc.ibge_code, dc.name, dc.uf_code
+	  i.origin_unit_id,
+	  ou.id, ou.name, ou.uf_code
 	FROM resocialization.inmates AS i
-	LEFT JOIN public.cities AS oc ON i.origin_id = oc.id
-	LEFT JOIN public.cities AS dc ON i.destination_id = dc.id
+	LEFT JOIN public.prison_units AS ou ON i.origin_unit_id = ou.id
 	WHERE i.user_id = $1
 	ORDER BY i.id DESC
 	LIMIT $2 OFFSET $3;

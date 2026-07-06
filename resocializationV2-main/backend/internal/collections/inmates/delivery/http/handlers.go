@@ -21,8 +21,8 @@ func (h *Handler) Create(c echo.Context) error {
 	}
 
 	// Validações básicas
-	if in.OriginID <= 0 {
-		return echo.NewHTTPError(http.StatusBadRequest, "origin_id is required")
+	if in.OriginUnitID <= 0 {
+		return echo.NewHTTPError(http.StatusBadRequest, "origin_unit_id is required")
 	}
 	if in.Custody == "" {
 		return echo.NewHTTPError(http.StatusBadRequest, "custody is required")
@@ -30,8 +30,13 @@ func (h *Handler) Create(c echo.Context) error {
 	if in.Custody != "CLOSED" && in.Custody != "SEMI_OPEN" && in.Custody != "OPEN" {
 		return echo.NewHTTPError(http.StatusBadRequest, "custody must be CLOSED, SEMI_OPEN or OPEN")
 	}
-	if in.DestinationID <= 0 {
-		return echo.NewHTTPError(http.StatusBadRequest, "destination_id is required")
+	if len(in.DestinationUnitIDs) == 0 {
+		return echo.NewHTTPError(http.StatusBadRequest, "destination_unit_ids is required")
+	}
+	for _, unitID := range in.DestinationUnitIDs {
+		if unitID <= 0 {
+			return echo.NewHTTPError(http.StatusBadRequest, "destination_unit_ids must contain valid ids")
+		}
 	}
 
 	// O userID já foi injetado no context pelo UserIDMiddleware
@@ -102,8 +107,8 @@ func (h *Handler) Update(c echo.Context) error {
 	in.Id = &id
 
 	// Validações básicas
-	if in.OriginID <= 0 {
-		return echo.NewHTTPError(http.StatusBadRequest, "origin_id is required")
+	if in.OriginUnitID <= 0 {
+		return echo.NewHTTPError(http.StatusBadRequest, "origin_unit_id is required")
 	}
 	if in.Custody == "" {
 		return echo.NewHTTPError(http.StatusBadRequest, "custody is required")
@@ -111,8 +116,13 @@ func (h *Handler) Update(c echo.Context) error {
 	if in.Custody != "CLOSED" && in.Custody != "SEMI_OPEN" && in.Custody != "OPEN" {
 		return echo.NewHTTPError(http.StatusBadRequest, "custody must be CLOSED, SEMI_OPEN or OPEN")
 	}
-	if in.DestinationID <= 0 {
-		return echo.NewHTTPError(http.StatusBadRequest, "destination_id is required")
+	if len(in.DestinationUnitIDs) == 0 {
+		return echo.NewHTTPError(http.StatusBadRequest, "destination_unit_ids is required")
+	}
+	for _, unitID := range in.DestinationUnitIDs {
+		if unitID <= 0 {
+			return echo.NewHTTPError(http.StatusBadRequest, "destination_unit_ids must contain valid ids")
+		}
 	}
 
 	err, _, inmate := h.uc.Update(c.Request().Context(), in)

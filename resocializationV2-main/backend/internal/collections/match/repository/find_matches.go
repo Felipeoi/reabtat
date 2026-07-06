@@ -5,6 +5,7 @@ import (
 
 	"github.com/jackc/pgx/v5/pgtype"
 	"github.com/jackc/pgx/v5/pgxpool"
+	inmatesrepo "github.com/jeje-gab/resocializationV2/backend/internal/collections/inmates/repository"
 	"github.com/jeje-gab/resocializationV2/backend/internal/entity"
 )
 
@@ -13,9 +14,7 @@ type FindMatchesRepo struct {
 }
 
 func NewFindMatchesRepo(pool *pgxpool.Pool) *FindMatchesRepo {
-	return &FindMatchesRepo{
-		pool: pool,
-	}
+	return &FindMatchesRepo{pool: pool}
 }
 
 func (r *FindMatchesRepo) Execute(ctx context.Context, userID int64) ([]entity.MatchResult, error) {
@@ -25,82 +24,47 @@ func (r *FindMatchesRepo) Execute(ctx context.Context, userID int64) ([]entity.M
 	}
 	defer rows.Close()
 
-	var results []entity.MatchResult
+	results := make([]entity.MatchResult, 0)
+	inmateIDs := make([]int, 0)
+
 	for rows.Next() {
 		var (
-			// My Inmate
-			myID            int32
-			myOriginID      int32
-			myDestinationID int32
-			myCustody       string
-			myAttorney      pgtype.Text
-			myPhone         pgtype.Text
-			myUserID        int64
-			// My Origin City
-			myOriginCityID int32
-			myOriginIBGE   string
-			myOriginName   string
-			myOriginUF     string
-			// My Destination City
-			myDestCityID int32
-			myDestIBGE   string
-			myDestName   string
-			myDestUF     string
-			// Matched Inmate
-			matchID            int32
-			matchOriginID      int32
-			matchDestinationID int32
-			matchCustody       string
-			matchAttorney      pgtype.Text
-			matchPhone         pgtype.Text
-			matchUserID        int64
-			// Matched Origin City
-			matchOriginCityID int32
-			matchOriginIBGE   string
-			matchOriginName   string
-			matchOriginUF     string
-			// Matched Destination City
-			matchDestCityID int32
-			matchDestIBGE   string
-			matchDestName   string
-			matchDestUF     string
+			myID, myOriginUnitID int32
+			myCustody            string
+			myAttorney, myPhone  pgtype.Text
+			myUserID             int64
+			myOriginUnitIDJoin   int32
+			myOriginUnitName     string
+			myOriginUnitUF       string
+
+			matchID, matchOriginUnitID int32
+			matchCustody               string
+			matchAttorney, matchPhone  pgtype.Text
+			matchUserID                int64
+			matchOriginUnitIDJoin      int32
+			matchOriginUnitName        string
+			matchOriginUnitUF          string
 		)
 
 		if err := rows.Scan(
-			// My Inmate
-			&myID, &myOriginID, &myDestinationID, &myCustody, &myAttorney, &myPhone, &myUserID,
-			// My Origin City
-			&myOriginCityID, &myOriginIBGE, &myOriginName, &myOriginUF,
-			// My Destination City
-			&myDestCityID, &myDestIBGE, &myDestName, &myDestUF,
-			// Matched Inmate
-			&matchID, &matchOriginID, &matchDestinationID, &matchCustody, &matchAttorney, &matchPhone, &matchUserID,
-			// Matched Origin City
-			&matchOriginCityID, &matchOriginIBGE, &matchOriginName, &matchOriginUF,
-			// Matched Destination City
-			&matchDestCityID, &matchDestIBGE, &matchDestName, &matchDestUF,
+			&myID, &myOriginUnitID, &myCustody, &myAttorney, &myPhone, &myUserID,
+			&myOriginUnitIDJoin, &myOriginUnitName, &myOriginUnitUF,
+			&matchID, &matchOriginUnitID, &matchCustody, &matchAttorney, &matchPhone, &matchUserID,
+			&matchOriginUnitIDJoin, &matchOriginUnitName, &matchOriginUnitUF,
 		); err != nil {
 			return nil, err
 		}
 
-		result := entity.MatchResult{
+		inmateIDs = append(inmateIDs, int(myID), int(matchID))
+
+		results = append(results, entity.MatchResult{
 			MyInmate: entity.InmateMatchInfo{
-				ID:            int(myID),
-				OriginID:      int(myOriginID),
-				DestinationID: int(myDestinationID),
-				Custody:       myCustody,
-				UserID:        myUserID,
-				Origin: &entity.City{
-					ID:       int(myOriginCityID),
-					IBGECode: myOriginIBGE,
-					Name:     myOriginName,
-					UFCode:   myOriginUF,
-				},
-				Destination: &entity.City{
-					ID:       int(myDestCityID),
-					IBGECode: myDestIBGE,
-					Name:     myDestName,
-					UFCode:   myDestUF,
+				ID:           int(myID),
+				OriginUnitID: int(myOriginUnitID),
+				Custody:      myCustody,
+				UserID:       myUserID,
+				OriginUnit: &entity.PrisonUnit{
+					ID: int(myOriginUnitIDJoin), Name: myOriginUnitName, UFCode: myOriginUnitUF,
 				},
 				Responsible: entity.InmatesResponsible{
 					Attorney: myAttorney.String,
@@ -108,71 +72,75 @@ func (r *FindMatchesRepo) Execute(ctx context.Context, userID int64) ([]entity.M
 				},
 			},
 			MatchedInmate: entity.InmateMatchInfo{
-				ID:            int(matchID),
-				OriginID:      int(matchOriginID),
-				DestinationID: int(matchDestinationID),
-				Custody:       matchCustody,
-				UserID:        matchUserID,
-				Origin: &entity.City{
-					ID:       int(matchOriginCityID),
-					IBGECode: matchOriginIBGE,
-					Name:     matchOriginName,
-					UFCode:   matchOriginUF,
-				},
-				Destination: &entity.City{
-					ID:       int(matchDestCityID),
-					IBGECode: matchDestIBGE,
-					Name:     matchDestName,
-					UFCode:   matchDestUF,
+				ID:           int(matchID),
+				OriginUnitID: int(matchOriginUnitID),
+				Custody:      matchCustody,
+				UserID:       matchUserID,
+				OriginUnit: &entity.PrisonUnit{
+					ID: int(matchOriginUnitIDJoin), Name: matchOriginUnitName, UFCode: matchOriginUnitUF,
 				},
 				Responsible: entity.InmatesResponsible{
 					Attorney: matchAttorney.String,
 					Phone:    matchPhone.String,
 				},
 			},
-			MatchScore: 100, // Score fixo por enquanto
+			MatchScore: 100,
 			Custody:    myCustody,
-		}
-
-		results = append(results, result)
+		})
 	}
 
 	if err := rows.Err(); err != nil {
 		return nil, err
 	}
 
+	destMap, err := inmatesrepo.LoadDestinationUnitsMap(ctx, r.pool, inmateIDs)
+	if err != nil {
+		return nil, err
+	}
+
+	for i := range results {
+		attachMatchDestinations(&results[i].MyInmate, destMap)
+		attachMatchDestinations(&results[i].MatchedInmate, destMap)
+	}
+
 	return results, nil
+}
+
+func attachMatchDestinations(info *entity.InmateMatchInfo, destMap map[int][]entity.PrisonUnit) {
+	units := destMap[info.ID]
+	if units == nil {
+		units = []entity.PrisonUnit{}
+	}
+	info.DestinationUnits = units
+	info.DestinationUnitIDs = inmatesrepo.DestinationUnitIDs(units)
 }
 
 var findMatchesSQL = `
 	SELECT
-		-- My Inmate
-		my.id, my.origin_id, my.destination_id, my.custody,
+		my.id, my.origin_unit_id, my.custody,
 		my.responsible_attorney, my.responsible_phone, my.user_id,
-		-- My Origin City
-		my_oc.id, my_oc.ibge_code, my_oc.name, my_oc.uf_code,
-		-- My Destination City
-		my_dc.id, my_dc.ibge_code, my_dc.name, my_dc.uf_code,
-		-- Matched Inmate
-		other.id, other.origin_id, other.destination_id, other.custody,
+		my_ou.id, my_ou.name, my_ou.uf_code,
+		other.id, other.origin_unit_id, other.custody,
 		other.responsible_attorney, other.responsible_phone, other.user_id,
-		-- Matched Origin City
-		other_oc.id, other_oc.ibge_code, other_oc.name, other_oc.uf_code,
-		-- Matched Destination City
-		other_dc.id, other_dc.ibge_code, other_dc.name, other_dc.uf_code
+		other_ou.id, other_ou.name, other_ou.uf_code
 	FROM resocialization.inmates AS my
-	-- My cities
-	LEFT JOIN public.cities AS my_oc ON my.origin_id = my_oc.id
-	LEFT JOIN public.cities AS my_dc ON my.destination_id = my_dc.id
-	-- Find matching inmates
+	LEFT JOIN public.prison_units AS my_ou ON my.origin_unit_id = my_ou.id
 	INNER JOIN resocialization.inmates AS other
-		ON my.origin_id = other.destination_id
-		AND my.destination_id = other.origin_id
-		AND my.custody = other.custody
+		ON my.custody = other.custody
 		AND my.user_id != other.user_id
-	-- Other cities
-	LEFT JOIN public.cities AS other_oc ON other.origin_id = other_oc.id
-	LEFT JOIN public.cities AS other_dc ON other.destination_id = other_dc.id
+		AND EXISTS (
+			SELECT 1
+			FROM resocialization.inmate_destination_units AS my_dest
+			WHERE my_dest.inmate_id = my.id
+			  AND my_dest.prison_unit_id = other.origin_unit_id
+		)
+		AND EXISTS (
+			SELECT 1
+			FROM resocialization.inmate_destination_units AS other_dest
+			WHERE other_dest.inmate_id = other.id
+			  AND other_dest.prison_unit_id = my.origin_unit_id
+		)
+	LEFT JOIN public.prison_units AS other_ou ON other.origin_unit_id = other_ou.id
 	WHERE my.user_id = $1
 	ORDER BY my.id, other.id;
 `

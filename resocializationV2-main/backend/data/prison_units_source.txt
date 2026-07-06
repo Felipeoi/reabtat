@@ -1,0 +1,1552 @@
+1. Acre (AC)
+		Unidade de Regime Fechado – 01
+		Unidade Provisória
+		Unidade de Regime Fechado – 02
+		Unidade Feminina – URF-F
+		Unidade de Regime Fechado – 03
+		Unidade de Monitoramento Eletrônico – UMEP
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2. Amapá (AP)
+		Penitenciária de Segurança Máxima
+		Colônia Penal (Anexo)
+		Penitenciária Masculina / Centro de Custódia (Cadeião)
+		Penitenciária Feminina
+		Unidade do Bairro Novo Horizonte
+		Unidade do Bairro Zerão
+		Unidade do Município de Oiapoque
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+3. Amazonas (AM)
+		Unidade Prisional do Puraquequara
+		Complexo Penitenciário Anísio Jobim
+		Instituto Penal Antônio Trindade
+		Centro de Detenção Provisória de Manaus I
+		Centro de Detenção Provisória de Manaus II
+		Centro de Detenção Feminino
+		Casa do Albergado de Manaus
+		Central de Recebimento e Triagem
+		Centro Feminino de Educação e Capacitação
+		Enfermaria Psiquiátrica
+		Unidade Prisional de Coari
+		Unidade Prisional de Tefé
+		Unidade Prisional de Humaitá
+		Unidade Prisional de Itacoatiara
+		Unidade Prisional de Maués
+		Unidade Prisional de Parintins
+		Unidade Prisional de Tabatinga
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+4. Pará (PA)
+	Pará – Região Metropolitana
+		CCP Cidade Nova – Central de Custódia Provisória da Cidade Nova
+		CCP Cremação – Central de Custódia Provisória da Cremação
+		CCP Marambaia – Central de Custódia Provisória da Marambaia
+		UCR Ananindeua – Unidade de Custódia e Reinserção de Ananindeua
+		UCRF Ananindeua – Unidade de Custódia e Reinserção Feminina de Ananindeua
+		UCR Coqueiro – Unidade de Custódia e Reinserção do Coqueiro
+		UCR Icoaraci – Unidade de Custódia e Reinserção de Icoaraci
+		CHAPA Belém – Casa de Humanização, Assistência e Proteção ao Apenado de Belém
+		UCR Mosqueiro – Unidade de Custódia e Reinserção de Mosqueiro
+		UCR Marituba I – Unidade de Custódia e Reinserção de Marituba I
+		UCR Marituba II – Unidade de Custódia e Reinserção de Marituba II
+		UCR Marituba III – Unidade de Custódia e Reinserção de Marituba III
+		CCP Santa Izabel – Central de Custódia Provisória de Santa Izabel
+		UCR Santa Izabel I – Unidade de Custódia e Reinserção de Santa Izabel I
+		UCR Santa Izabel II – Unidade de Custódia e Reinserção de Santa Izabel II
+		UCR Santa Izabel III – Unidade de Custódia e Reinserção de Santa Izabel III
+		UCR Santa Izabel IV – Unidade de Custódia e Reinserção de Santa Izabel IV
+		UCR Santa Izabel V – Unidade de Custódia e Reinserção de Santa Izabel V
+		UCR Santa Izabel VI – Unidade de Custódia e Reinserção de Santa Izabel VI
+		UPMAX I – Unidade Penitenciária de Segurança Máxima I
+		UPMAX II – Unidade Penitenciária de Segurança Máxima II
+		URRS Santa Izabel – Unidade de Reinserção de Regime Semiaberto de Santa Izabel
+		HGP – Hospital Geral Penitenciário
+		CIME – Central Integrada de Monitoramento Eletrônico
+
+	Pará – Interior
+		UCR Parauapebas – Unidade de Custódia e Reinserção de Parauapebas
+		URRS Abaetetuba – Unidade de Reinserção de Regime Semiaberto de Abaetetuba
+		UCR Abaetetuba – Unidade de Custódia e Reinserção de Abaetetuba
+		UCR Bragança – Unidade de Custódia e Reinserção de Bragança
+		UCR Cametá – Unidade de Custódia e Reinserção de Cametá
+		UCR Capanema – Unidade de Custódia e Reinserção de Capanema
+		UCR Castanhal – Unidade de Custódia e Reinserção de Castanhal
+		UCR Itaituba – Unidade de Custódia e Reinserção de Itaituba
+		UCR Mocajuba – Unidade de Custódia e Reinserção de Mocajuba
+		UCR Redenção – Unidade de Custódia e Reinserção de Redenção
+		UCR Salinópolis – Unidade de Custódia e Reinserção de Salinópolis
+		UCR Tomé-Açu – Unidade de Custódia e Reinserção de Tomé-Açu
+		UCR Tucuruí – Unidade de Custódia e Reinserção de Tucuruí
+		URRS Tucuruí – Unidade de Reinserção de Regime Semiaberto de Tucuruí
+		UCR Breves – Unidade de Custódia e Reinserção de Breves
+		UCR São Félix do Xingu – Unidade de Custódia e Reinserção de São Félix do Xingu
+
+	Complexo Prisional de Marabá
+		UCR Marabá – Unidade de Custódia e Reinserção de Marabá
+		URRS Marabá – Unidade de Reinserção de Regime Semiaberto de Marabá
+		UCRF Marabá – Unidade de Custódia e Reinserção Feminina de Marabá
+		CHAPA Marabá – Casa de Humanização, Assistência e Proteção ao Apenado de Marabá
+		CCP Marabá – Central de Custódia Provisória de Marabá
+		CMEM – Central de Monitoração Eletrônica de Marabá
+
+	Complexo Prisional de Santarém
+		UCR Santarém – Unidade de Custódia e Reinserção de Santarém
+		CCP Santarém – Central de Custódia Provisória de Santarém
+		UCRF Santarém – Unidade de Custódia e Reinserção Feminina de Santarém
+
+	Complexo Prisional de Paragominas
+		UCR Paragominas – Unidade de Custódia e Reinserção de Paragominas
+		CHAPA Paragominas – Casa de Humanização, Assistência e Proteção ao Apenado de Paragominas
+		URRS Paragominas – Unidade de Reinserção de Regime Semiaberto de Paragominas
+		CMEP – Central de Monitoração Eletrônica de Paragominas
+
+	Complexo Prisional de Vitória do Xingu
+		CHAPA Altamira – Casa de Humanização, Assistência e Proteção ao Apenado de Altamira
+		UCR Vitória do Xingu – Unidade de Custódia e Reinserção de Vitória do Xingu
+		UCRF Vitória do Xingu – Unidade de Custódia e Reinserção Feminina de Vitória do Xingu
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+5. Rondônia (RO)
+		Casa de Detenção Provisória – Urso Branco
+		Casa do Albergue Masculino
+		Centro de Ressocialização Suely Maria Mendonça
+		Centro de Ressocialização Vale do Guaporé
+		Colônia Agrícola Penal Ênio dos Santos Pinheiro – CAPEP I
+		Penitenciária Estadual Edvan Mariano Rosendo – Panda
+		Penitenciária Estadual Ênio dos Santos Pinheiro
+		Penitenciária Estadual Jorge Thiago Aguiar Afonso
+		Penitenciária de Médio Porte – Pandinha
+		Presídio Provisório Feminino – PEPFEM
+		Unidade Aberto e Semi-Aberto Feminino – USAAF
+		Unidade de Internação Masculina Medidas de Segurança
+		Unidade de Monitoramento Eletrônico
+		Casa de Detenção de Ariquemes
+		Casa do Albergado de Ariquemes
+		Casa de Detenção de Buritis
+		Centro de Ressocialização Jonas Ferreti
+		Casa de Detenção de Cacoal
+		Casa de Prisão Albergue Masculino de Cacoal
+		Penitenciária Regional Dr. Agenor Martins de Carvalho
+		Casa de Detenção de Ji-Paraná
+		Presídio Semiaberto de Ji-Paraná
+		Casa de Prisão Albergue Masculino de Ji-Paraná
+		Penitenciária Regional de Rolim de Moura
+		Casa de Detenção de Rolim de Moura
+		Casa de Prisão Semiaberto de Rolim de Moura
+		Casa de Prisão Albergue Masculino de Rolim de Moura
+		Casa de Detenção de Vilhena
+		Colônia Penal e Presídio Feminino
+		Casa do Egresso de Vilhena
+		Centro de Ressocialização Cone Sul
+		Casa de Detenção de Guajará-Mirim
+		Casa de Prisão Albergue Feminino de Guajará-Mirim
+		Casa de Prisão Albergue Masculino de Guajará-Mirim
+		Unidade Prisional Regime Semiaberto Masculino Guajará-Mirim
+		Casa de Detenção de Ouro Preto do Oeste
+		Cadeia Pública de Presidente Médici
+		Casa de Detenção de Jaru
+		Casa de Prisão Albergue de Jaru e Semiaberto
+		Presídio Feminino de Jaru
+		Casa de Detenção de Pimenta Bueno
+		Cadeia Pública de Alta Floresta D'Oeste
+		Cadeia Pública de Alvorada do Oeste
+		Cadeia Pública de Cerejeiras
+		Cadeia Pública de Colorado do Oeste
+		Cadeia Pública de Costa Marques
+		Cadeia Pública de Espigão do Oeste
+		Cadeia Pública de Machadinho do Oeste
+		Cadeia Pública de Nova Brasilândia
+		Penitenciária Regional de Nova Mamoré
+		Cadeia Pública de São Francisco do Guaporé
+		Cadeia Pública de Santa Luzia D'Oeste
+		Cadeia Pública de São Miguel do Guaporé
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+6. Roraima (RR)
+		Penitenciária Agrícola de Monte Cristo – PAMC
+		Cadeia Pública Feminina de Boa Vista – CPFBV
+		Divisão de Segurança e Captura – DICAP
+		Centro de Progressão Penitenciária – CPP
+		Cadeia Pública Masculina de Boa Vista – CPBV
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+7. Tocantins (TO)
+		Unidade Penal Feminina de Ananás
+		Unidade Penal de Araguaína
+		Unidade de Tratamento Penal Barra da Grota de Araguaína
+		Unidade Penal Regional de Araguatins
+		Unidade Penal Regional de Arraias
+		Unidade Penal de Augustinópolis
+		Fazenda Agropecuária Penal de Cariri
+		Unidade de Tratamento Penal de Cariri
+		Unidade Penal de Colinas
+		Unidade Penal de Colméia
+		Unidade Penal de Dianópolis
+		Unidade Penal de Formoso do Araguaia
+		Unidade Penal de Guaraí
+		Unidade Penal de Gurupi
+		Unidade Penal de Miracema
+		Unidade Penal Feminina de Miranorte
+		Unidade Penal de Natividade
+		Unidade Penal Regional de Palmas
+		Unidade Penal Feminina de Palmas
+		Unidade Penal de Palmeirópolis
+		Unidade Penal Regional de Paraíso
+		Unidade Penal de Porto Nacional
+		Unidade Penal de Taguatinga
+		Unidade Penal Feminina de Talismã
+		Unidade Penal de Tocantinópolis
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+8. Alagoas (AL)
+	Maceió
+		Presídio Feminino Santa Luzia
+		Presídio de Segurança Máxima
+		Presídio Cyridião Durval de Oliveira e Silva
+		Penitenciária Masculina Baldomero Cavalcanti de Oliveira
+		Penitenciária de Segurança Máxima
+		Núcleo Ressocializador da Capital
+		Colônia Agroindustrial São Leonardo
+		Centro Psiquiátrico Judiciário Pedro Marinho Suruagy
+		Casa de Custódia da Capital
+
+	Arapiraca
+		Presídio Desembargador Luiz de Oliveira Souza (PDLOS) – **Desativado**
+
+	Girau do Ponciano
+		Presídio do Agreste
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+9. Bahia (BA)
+		Cadeia Pública de Salvador
+		Casa do Albergado e Egresso
+		Central Médica Penitenciária
+		Centro de Observação Penal
+		Colônia Penal de Simões Filho
+		Colônia Penal Lafayete Coutinho
+		Conjunto Penal Advogado Nilton Gonçalves (Vitória da Conquista)
+		Conjunto Penal de Barreiras
+		Conjunto Penal de Brumado
+		Conjunto Penal de Eunápolis
+		Conjunto Penal de Feira de Santana
+		Conjunto Penal de Irecê
+		Conjunto Penal de Itabuna
+		Conjunto Penal de Jequié
+		Conjunto Penal de Juazeiro
+		Conjunto Penal de Lauro de Freitas
+		Conjunto Penal de Paulo Afonso
+		Conjunto Penal de Serrinha
+		Conjunto Penal de Teixeira de Freitas
+		Conjunto Penal de Valença
+		Conjunto Penal de Vitória da Conquista
+		Conjunto Penal Feminino
+		Conjunto Penal Masculino de Salvador
+		Hospital de Custódia e Tratamento
+		Penitenciária Lemos Brito
+		Presídio de Salvador
+		Presídio Regional Ariston Cardoso (Ilhéus)
+		Unidade Especial Disciplinar
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+10. Ceará (CE)
+		Unidade Prisional de Triagem e Observação Criminológica – CTOC (UP-TOC)
+		Unidade Prisional de Aquiraz – CDP (UP-Aquiraz)
+		Unidade Prisional Professor José Sobreira de Amorim (UP-Sobreira Amorim)
+		Unidade Prisional Irmã Imelda Lima Pontes (UP-Imelda)
+		Unidade Prisional Francisco Hélio Viana de Araújo (UP-Pacatuba)
+		Unidade Prisional Feminina Desembargadora Auri Moura Costa (UPF)
+		Unidade Prisional Professor Olavo Oliveira II (UPPOO II)
+		Hospital e Sanatório Prisional Professor Otávio Lobo (HSPPOL)
+		Instituto Psiquiátrico Governador Stênio Gomes (IPGSG)
+		Unidade Prisional Desembargador Francisco Adalberto de Oliveira Barros Leal (UP-Caucaia)
+		Unidade Prisional Agente Penitenciário Luciano Andrade Lima – CPPL I (UP-Itaitinga I)
+		Unidade Prisional Professor Clodoaldo Pinto – CPPL II (UP-Itaitinga II)
+		Unidade Prisional Professor José Jucá Neto – CPPL III (UP-Itaitinga III)
+		Unidade Prisional Elias Alves da Silva – CPPL IV (UP-Itaitinga IV)
+		Unidade Prisional Vasco Damasceno Weyne – CEPIS (UP-Itaitinga V)
+		Unidade Prisional de Ensino, Capacitação e Trabalho de Itaitinga – CPPL VI (UPECT-Itaitinga)
+		Unidade Prisional de Segurança Máxima do Estado do Ceará (UP-Máxima)
+		Unidade Prisional de Trairi (UP-Trairi)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+11. Maranhão (MA)
+	Região Metropolitana de São Luís
+		CAAES – São Luís
+		UPMTC – Monte Castelo
+		UPFEM – Feminino
+		COCTS – Triagem
+		UPSL1 – São Luís 1
+		UPSL2 – São Luís 2
+		UPSL3 – São Luís 3
+		UPSL4 – São Luís 4
+		UPSL5 – São Luís 5
+		UPSL6 – São Luís 6
+		GEOP
+		UPODA – Olho d'Água
+		UPANL – Anil
+		UPPDL – Paço do Lumiar
+		PRSLZ – Penitenciária Regional de São Luís
+		Portaria Unificada
+
+	Interior
+		UPTIM – Timon
+		PRTIM – Penitenciária Regional de Timon
+		UPPSD – Presidente Dutra
+		UPCDO – Codó
+		UPCAX – Caxias
+		UPCHA – Chapadinha
+		UPROS – Rosário
+		UPCOR – Coroatá
+		UPSTI – Santa Inês
+		UPGNF – Governador Nunes Freire
+		UPCRU – Cururupu
+		UPCAR – Carutapera
+		UPDVN – Davinópolis
+		UPITZ – Imperatriz
+		UPACA – Açailândia
+		UPZDA – Zé Doca
+		UPCLN – Colinas
+		PRPDR – Penitenciária Regional de Pedreiras
+		UPITP – Itapecuru
+		UPBBL – Bacabal
+		UPVIN – Viana
+		UPTTA – Tutóia
+		PRPHO – Penitenciária Regional de Pinheiro
+		UPBDG – Barão de Grajaú
+		UPBDC – Barra do Corda
+		UPPHO – Pinheiro
+		UPPFR – Porto Franco
+		PRITZ – Penitenciária Regional de Imperatriz
+		UPBLS – Balsas
+		UPGRA – Grajaú
+		UPCLA – Carolina
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+12. Paraíba (PB)
+	Penitenciárias
+		Penitenciária Flósculo da Nóbrega (Róger)
+		Penitenciária de Segurança Média Juiz Hitler Cantalice
+		Penitenciária de Segurança Máxima Criminalista Geraldo Beltrão
+		Penitenciária Desembargador Sílvio Porto
+		Penitenciária Dr. Romeu Gonçalves de Abrantes (PB1 e PB2)
+		Penitenciária de Psiquiatria Forense (IPF)
+		Penitenciária de Recuperação Feminina Maria Júlia Maranhão
+		Penitenciária de Regime Especial Desembargador Francisco Espínola
+		Penitenciária Padrão de Santa Rita
+		Penitenciária Regional de Sapé
+		Penitenciária João Bosco Carneiro
+		Penitenciária Regional de Campina Grande Raimundo Asfora (Serrotão)
+		Penitenciária de Campina Grande Jurista Angello Amorim (Monte Santo)
+		Penitenciária Regional Padrão de Campina Grande (Máxima)
+		Penitenciária Feminina de Campina Grande
+		Penitenciária Padrão Romero Nóbrega de Patos
+		Penitenciária Padrão Regional de Cajazeiras
+		Penitenciária Feminina de Cajazeiras
+		Colônia Agrícola Penal de Sousa
+		Presídio Regional de Guarabira
+
+	Cadeias Públicas		
+		Cadeia Pública de Alagoa Grande
+		Cadeia Pública de Alagoa Nova
+		Cadeia Pública de Alagoinha
+		Cadeia Pública de Alhandra
+		Cadeia Pública de Araruna
+		Cadeia Pública de Areia
+		Cadeia Pública de Aroeiras
+		Cadeia Pública de Boqueirão
+		Cadeia Pública de Bonita de Santa Rosa
+		Cadeia Pública de Bayeux
+		Cadeia Pública de Belém
+		Cadeia Pública de Conceição
+		Cadeia Pública de Cabaceiras
+		Cadeia Pública de Caiçara
+		Cadeia Pública de Cajazeiras
+		Cadeia Pública de Catolé do Rocha
+		Cadeia Pública de Coremas
+		Cadeia Pública de Cuité
+		Cadeia Pública de Guarabira
+		Cadeia Pública de Cruz do Espírito Santo
+		Cadeia Pública de Esperança
+		Cadeia Pública de Gurinhém
+		Cadeia Pública de Itabaiana
+		Cadeia Pública de Itaporanga
+		Cadeia Pública de Ingá
+		Cadeia Pública de Jacaraú
+		Cadeia Pública de Juazeirinho
+		Cadeia Pública de Mamanguape
+		Cadeia Pública de Malta
+		Cadeia Pública de Monteiro
+		Cadeia Pública de Pedras de Fogo
+		Cadeia Pública de Piancó
+		Cadeia Pública de Picuí
+		Cadeia Pública de Pilões
+		Cadeia Pública de Pilar
+		Cadeia Pública de Pocinhos
+		Cadeia Pública de Pombal
+		Cadeia Pública de Prata
+		Cadeia Pública de Princesa Isabel
+		Cadeia Pública de Queimadas
+		Cadeia Pública de Rio Tinto
+		Cadeia Pública de Remígio
+		Cadeia Pública de Santa Luzia
+		Cadeia Pública de Santa Rita
+		Cadeia Pública de São Bento
+		Cadeia Pública de Santana dos Garrotes
+		Cadeia Pública de São João do Cariri
+		Cadeia Pública de São João do Rio do Peixe
+		Cadeia Pública de São José de Piranhas
+		Cadeia Pública de Serra Branca
+		Cadeia Pública de Serraria
+		Cadeia Pública de Solânea
+		Cadeia Pública de Soledade
+		Cadeia Pública de Sumé
+		Cadeia Pública de Sapé
+		Cadeia Pública de Taperoá
+		Cadeia Pública de Teixeira
+		Cadeia Pública de Uiraúna
+		Cadeia Pública de Umbuzeiro
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+13. Pernambuco (PE)
+	Região Metropolitana
+		Presídio Juiz Antonio Luis Lins de Barros (PJALLB)
+		Presídio Frei Damião de Bozzano (PFDB)
+		Penitenciária Agroindustrial São João (PAISJ)
+		Colônia Penal Feminina do Recife (CPFR)
+		Colônia Penal Feminina de Abreu e Lima (CPFAL)
+		Centro de Observação Criminológica e Triagem Professor Everardo Luna (COTEL)
+		Centro de Saúde Penitenciário (CSP)
+		Presídio de Igarassu (PI)
+		Presídio Policial Penal Leonardo Lago (PLL)
+
+	Interior
+		Colônia Penal Feminina de Buíque (CPFB)
+		Presídio Rorinildo da Rocha Leão (PRRL)
+		Penitenciária de Tacaimbó (PTAC)
+		Presídio de Itaquitinga I (PIT I)
+		Presídio de Itaquitinga II (PIT II)
+		Centro de Ressocialização do Agreste (CRA)
+		Presídio de Salgueiro (PSAL)
+		Penitenciária Juiz Plácido de Souza (PJPS)
+		Penitenciária Dr. Enio Pessoa Guerra (PDEPG)
+		Presídio Advogado Brito Alves (PABA)
+		Penitenciária Dr. Edvaldo Gomes (PDEG)
+		Presídio de Vitória de Santo Antão (PVSA)
+		Presídio Desembargador Augusto Duque (PDAD)
+		Presídio de Santa Cruz do Capibaribe (PSCC)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+14. Piauí (PI)
+		Cadeia Pública Antônio José de Sousa Filho – Altos
+		Colônia Agrícola Major César Oliveira – Altos
+		Penitenciária Adalberto de Moura Santos (Feminina de Picos)
+		Penitenciária Bispo Sebastião Alves de Souza – Buriti dos Lopes
+		Penitenciária Capitão Carlos José Gomes Assis – Altos
+		Penitenciária Dom Abel Alonso Núñez – Bom Jesus
+		Penitenciária Dom Inocêncio Lopez Santamaria – São Raimundo Nonato
+		Penitenciária Gardênia Gomes Lima Amorim (Feminina de Teresina)
+		Penitenciária Gonçalo de Castro Lima – Floriano
+		Penitenciária Irmão Guido – Teresina
+		Penitenciária José de Arimateia Barbosa Leite – Campo Maior
+		Penitenciária José de Deus Barros (Masculina de Picos)
+		Penitenciária Mista Juiz Fontes Ibiapina – Parnaíba
+		Penitenciária Professor José de Ribamar Leite – Teresina
+		Penitenciária Regional Maria de Cota – Oeiras
+		Penitenciária Luiz Gonzaga Rebelo – Esperantina
+		Penitenciária Humberto Reis da Silveira – Altos
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+15. Rio Grande do Norte (RN)
+	Capital e Região Metropolitana
+		Cadeia Pública de Natal Raimundo Nonato (CPN)
+		Complexo Penal João Chaves Feminino (CPJC Feminino)
+		Unidade Psiquiátrica de Custódia e Tratamento (UPCT)
+		Central de Recebimento e Triagem (CRT)
+		Centro de Detenção Provisória de Parnamirim Feminino
+		Penitenciária Estadual de Parnamirim (PEP)
+		Penitenciária Estadual de Alcaçuz (PEA)
+		Complexo Penal João Chaves Masculino (CPJC Masculino)
+		Penitenciária Estadual Rogério Coutinho Madruga (PERCM)
+		Cadeia Pública de Ceará-Mirim Dinorá Simas Lima Deodato (CPCM)
+
+	Interior
+		Penitenciária Estadual do Seridó (PES)
+		Centro de Detenção Provisória de Apodi (CDP Apodi)
+		Cadeia Pública de Mossoró (CPM)
+		Complexo Penal Estadual Agrícola Mário Negócio – Masculino (CPEAMN Masculino)
+		Complexo Penal Estadual Agrícola Mário Negócio – Feminino (CPEAMN Feminino)
+		Complexo Penal Regional de Pau dos Ferros (CPRPF)
+
+	Outras Unidades
+		Central de Monitoramento Eletrônico (CEME)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+16. Sergipe (SE)
+	Gestão e Controle
+		Central de Monitoramento Eletrônico de Presos (CEMEP)
+
+	Unidades Prisionais
+		Unidade de Custódia Psiquiátrica (UCP)
+		Cadeia Territorial de Nossa Senhora do Socorro (Cadeião)
+		Complexo Penitenciário Manoel Carvalho Neto (COPEMCAN)
+		Presídio Feminino (PREFEM)
+		Presídio Regional Juiz Manoel Barbosa de Souza (PREMABAS)
+		Presídio Regional Senador Leite Neto (PRESLEN)
+		Presídio Semiaberto de Areia Branca (PRESAB)
+		Cadeia Pública de Areia Branca
+		Cadeia Pública de Estância
+		Complexo Penitenciário Advogado Antônio Jacinto Filho (COMPAJAF)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+17. Distrito Federal (DF)
+	Unidades Prisionais e de Execução Penal
+		Centro de Detenção Provisória (CDP)
+		Centro de Internamento e Reeducação (CIR)
+		Centro de Progressão Penitenciária (CPP)
+		Penitenciária do Distrito Federal I (PDF I)
+		Penitenciária do Distrito Federal II (PDF II)
+		Penitenciária do Distrito Federal IV (PDF IV)
+		Penitenciária Feminina do Distrito Federal (PFDF)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+18. Goiás (GO)
+	1ª Coordenação Regional Metropolitana (Aparecida de Goiânia)
+		Casa do Albergado Guimarães Natal
+		Central de Alternativas à Prisão
+		Casa de Prisão Provisória de Aparecida de Goiânia
+		Central de Triagem de Aparecida de Goiânia
+		Penitenciária Coronel Odenir Guimarães
+		Penitenciária Feminina Consuelo Nasser
+		Núcleo de Custódia de Aparecida de Goiânia
+		Colônia Agroindustrial do Regime Semiaberto
+		Unidade Prisional de Anápolis
+		Unidade Prisional de Aragoiânia
+		Unidade Prisional de Alexânia
+		Unidade Prisional de Bela Vista de Goiás
+		Unidade Prisional de Corumbá de Goiás
+		Unidade Prisional de Goianápolis
+		Unidade Prisional de Goianira
+		Unidade Prisional de Guapó
+		Unidade Prisional de Hidrolândia
+		Unidade Prisional de Inhumas
+		Unidade Prisional de Nerópolis
+		Semiaberto de Cocalzinho de Goiás
+		Unidade Prisional de Senador Canedo
+		Unidade Prisional de Trindade
+
+	2ª Coordenação Regional Noroeste (Itaberaí)
+		Unidade Prisional de Araçu
+		Unidade Prisional de Aruanã
+		Unidade Prisional da Cidade de Goiás
+		Unidade Prisional de Itaberaí
+		Unidade Prisional de Itaguaru
+		Unidade Prisional de Itapirapuã
+		Unidade Prisional de Itapuranga
+		Unidade Prisional de Itauçu
+		Unidade Prisional de Jussara
+		Unidade Prisional de Mossâmedes
+		Unidade Prisional de Mozarlândia
+		Unidade Prisional de Nova Crixás
+		Unidade Prisional de Novo Brasil
+		Unidade Prisional de Sanclerlândia
+		Unidade Prisional de São Miguel do Araguaia
+
+	3ª Coordenação Regional Entorno de Luziânia
+		Unidade Prisional de Águas Lindas de Goiás
+		Unidade Prisional de Abadiânia
+		Unidade Prisional de Alexânia
+		Unidade Prisional de Cidade Ocidental
+		Unidade Prisional de Cristalina
+		Luziânia – CPP
+		Luziânia – Feminino
+		Luziânia – Penitenciária
+		Luziânia – Semiaberto
+		Unidade Prisional de Novo Gama
+		Unidade Prisional de Padre Bernardo
+		Unidade Prisional de Santo Antônio do Descoberto
+		Unidade Prisional de Valparaíso
+
+	4ª Coordenação Regional Sudeste (Caldas Novas)
+		Unidade Prisional de Bom Jesus de Goiás
+		Unidade Prisional de Buriti Alegre
+		Unidade Prisional de Caldas Novas
+		Unidade Prisional de Catalão
+		Unidade Prisional de Corumbaíba
+		Unidade Prisional de Goiatuba
+		Unidade Prisional de Ipameri
+		Unidade Prisional de Itumbiara
+		Unidade Prisional de Morrinhos
+		Unidade Prisional de Piracanjuba
+		Unidade Prisional de Pires do Rio
+		Unidade Prisional de Pontalina
+		Unidade Prisional de Silvânia
+		Unidade Prisional de Vianópolis
+
+	5ª Coordenação Regional Centro-Oeste (Palmeiras)
+		Unidade Prisional de Anicuns
+		Unidade Prisional de Aragarças
+		Unidade Prisional de Edéia
+		Unidade Prisional de Firminópolis
+		Unidade Prisional de Indiara
+		Unidade Prisional de Iporá
+		Unidade Prisional de Palmeiras de Goiás
+		Unidade Prisional de Paraúna
+		Unidade Prisional de Piranhas
+		Unidade Prisional de São Luís de Montes Belos
+
+	6ª Coordenação Regional Sudoeste (Rio Verde)
+		Unidade Prisional de Acreúna
+		Unidade Prisional de Cachoeira Alta
+		Unidade Prisional de Itajá
+		Unidade Prisional de Jataí
+		Unidade Prisional de Mineiros
+		Unidade Prisional de Quirinópolis
+		Rio Verde – CPP
+		Rio Verde – Penitenciária
+		Rio Verde – Semiaberto Gonzaga Jaime
+		Unidade Prisional de Santa Helena de Goiás
+		Unidade Prisional de São Simão
+		Unidade Prisional de Serranópolis
+
+	7ª Coordenação Regional Norte (Ceres)
+		Unidade Prisional de Barro Alto
+		Unidade Prisional de Campinorte
+		Unidade Prisional de Ceres
+		Unidade Prisional de Crixás
+		Unidade Prisional de Estrela do Norte
+		Unidade Prisional de Goianésia
+		Unidade Prisional de Itapaci
+		Unidade Prisional de Jaraguá
+		Unidade Prisional de Mara Rosa
+		Unidade Prisional de Minaçu
+		Unidade Prisional de Niquelândia
+		Unidade Prisional de Porangatu
+		Unidade Prisional de Rialma
+		Unidade Prisional de Rubiataba
+		Unidade Prisional de Uruaçu
+
+	8ª Coordenação Regional Nordeste (Formosa)
+		Unidade Prisional de Alto Paraíso de Goiás
+		Unidade Prisional de Campos Belos
+		Unidade Prisional de Flores de Goiás
+		Formosa – CPP
+		Formosa – Penitenciária
+		Unidade Prisional de Iaciara
+		Unidade Prisional de Planaltina
+		Unidade Prisional de Posse
+		Unidade Prisional de Simolândia
+
+	Unidades Administradas pela Polícia Militar e Polícia Civil
+		Unidade Prisional de Petrolina de Goiás
+		Presídio Militar de Goiás
+		Unidade Prisional de Varjão
+		Unidade Prisional de Montes Claros de Goiás
+		Unidade Prisional de Cromínia
+		Unidade Prisional de Cumari
+		Unidade Prisional de Goiandira
+		Unidade Prisional de Joviânia
+		Unidade Prisional de Mairipotaba
+		Unidade Prisional de Urutaí
+		Unidade Prisional de Vicentinópolis
+		Unidade Prisional de Orizona
+		Unidade Prisional de Santa Cruz de Goiás
+		Unidade Prisional de Aurilândia
+		Unidade Prisional de Caiapônia
+		Unidade Prisional de Israelândia
+		Unidade Prisional de Nazário
+		Unidade Prisional de Santa Bárbara de Goiás
+		Unidade Prisional de Turvânia
+		Unidade Prisional de Caçu
+		Unidade Prisional de Itarumã
+		Unidade Prisional de Maurilândia
+		Unidade Prisional de Paranaiguara
+		Unidade Prisional de Campos Verdes
+		Unidade Prisional de Carmo do Rio Verde
+		Unidade Prisional de Formoso
+		Unidade Prisional de Santa Terezinha de Goiás
+		Unidade Prisional de Uruana
+		Unidade Prisional de São Luiz do Norte
+		Unidade Prisional de Cavalcante
+		Unidade Prisional de São Domingos
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+19. Mato Grosso (MT)
+	Superintendência Penitenciária Regional Leste
+		Cadeia Pública de Alto Araguaia
+		Cadeia Pública de Barra do Garças
+		Penitenciária Major Zuzi Alves da Silva (Água Boa)
+		Cadeia Pública de Chapada dos Guimarães
+		Cadeia Pública de Jaciara
+		Cadeia Pública de Nova Xavantina
+		Cadeia Pública de Paranatinga
+		Cadeia Pública de Primavera do Leste
+		Cadeia Pública de Porto Alegre do Norte
+		Cadeia Pública Feminina de Rondonópolis
+		Penitenciária Major Eldo de Sá Corrêa (Rondonópolis)
+		Cadeia Pública de São Félix do Araguaia
+		Colônia Penal Agrícola de Palmeiras (Santo Antônio de Leverger)
+		Cadeia Pública de Vila Rica
+		Penitenciária Central do Estado
+		Penitenciária Feminina Ana Maria do Couto May
+		Centro de Ressocialização de Várzea Grande
+		Coordenadoria de Custódia e Escolta Metropolitana	
+
+	Superintendência Penitenciária Regional Oeste
+		Cadeia Pública de Alta Floresta
+		Cadeia Pública de Araputanga
+		Cadeia Pública de Arenápolis
+		Cadeia Pública de Barra do Bugres
+		Cadeia Pública Feminina de Cáceres
+		Cadeia Pública de Cáceres
+		Cadeia Pública de Campo Novo do Parecis
+		Cadeia Pública de Colíder
+		Cadeia Pública de Colniza
+		Cadeia Pública de Comodoro
+		Cadeia Pública de Diamantino
+		Cadeia Pública de Juara
+		Centro de Detenção Provisória de Juína
+		Centro de Detenção Provisória de Lucas do Rio Verde
+		Cadeia Pública de Mirassol D'Oeste
+		Cadeia Pública de Nobres
+		Centro de Detenção Provisória de Peixoto de Azevedo
+		Penitenciária Dr. Osvaldo Florentino Leite Ferreira (Sinop)
+		Centro de Detenção Provisória de Pontes e Lacerda
+		Cadeia Pública de Porto dos Gaúchos
+		Cadeia Pública de Sorriso
+		Centro de Detenção Provisória de Tangará da Serra
+		Centro de Ressocialização Industrial Ahmenon Lemos Dantas (Várzea Grande)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20. Mato Grosso do Sul (MS)
+	Amambai
+		Estabelecimento Penal de Amambai
+
+	Aquidauana
+		Estabelecimento Penal de Aquidauana
+		Estabelecimento Penal de Regime Semiaberto, Aberto e Assistência ao Albergado de Aquidauana
+		Unidade Mista de Monitoramento Virtual Estadual
+
+	Bataguassu
+		Estabelecimento Penal de Bataguassu
+
+	Caarapó
+		Estabelecimento Penal Masculino de Regime Fechado de Caarapó
+
+	Campo Grande
+		Central Integrada de Alternativas Penais de Campo Grande
+		Central Provisória de Audiência de Custódia
+		Centro de Triagem Anísio Lima
+		Centro Penal Agroindustrial da Gameleira de Regime Semiaberto
+		Escritório Social
+		Estabelecimento Penal Feminino de Regime Semiaberto, Aberto e Assistência à Albergada de Campo Grande
+		Estabelecimento Penal Feminino Irmã Irma Zorzi
+		Estabelecimento Penal Jair Ferreira de Carvalho
+		Instituto Penal de Campo Grande
+		Módulo de Saúde do Complexo Penitenciário da Capital
+		Patronato Penitenciário de Campo Grande
+		Penitenciária Estadual Masculina de Regime Fechado da Gameleira I
+		Penitenciária Estadual Masculina de Regime Fechado da Gameleira II
+		Presídio de Trânsito de Campo Grande
+		Unidade Mista de Monitoramento Virtual Estadual
+
+	Cassilândia
+		Estabelecimento Penal de Cassilândia
+		Patronato Penitenciário de Cassilândia
+		Unidade Mista de Monitoramento Virtual Estadual
+
+	Corumbá
+		Estabelecimento Penal de Corumbá
+		Estabelecimento Penal Feminino Carlos Alberto Jonas Giordano
+		Patronato Penitenciário de Corumbá
+		Unidade Mista de Monitoramento Virtual Estadual
+
+	Coxim
+		Estabelecimento Penal Masculino de Coxim
+
+	Dois Irmãos do Buriti
+		Penitenciária de Dois Irmãos do Buriti
+
+	Dourados
+		Central Integrada de Alternativas Penais de Dourados
+		Estabelecimento Penal de Regime Semiaberto, Aberto e Assistência ao Albergado de Dourados
+		Patronato Penitenciário de Dourados
+		Penitenciária Estadual de Dourados
+		Unidade Mista de Monitoramento Virtual Estadual
+
+	Iguatemi	
+		Centro de Detenção Provisória de Iguatemi
+	Ivinhema
+		Estabelecimento Penal Masculino de Regime Fechado de Ivinhema
+
+	Jardim
+		Estabelecimento Penal Máximo Romero
+
+	Jateí
+		Estabelecimento Penal Feminino Luiz Pereira da Silva
+
+	Naviraí
+		Patronato Penitenciário de Naviraí
+		Penitenciária de Segurança Máxima de Naviraí
+		Unidade Mista de Monitoramento Virtual Estadual
+
+	Nova Andradina
+		Estabelecimento Penal Masculino de Regime Fechado de Nova Andradina
+
+	Paranaíba
+		Estabelecimento Penal de Paranaíba
+		Patronato Penitenciário de Paranaíba
+		Unidade Mista de Monitoramento Virtual Estadual
+
+	Ponta Porã
+		Estabelecimento Penal Feminino de Ponta Porã
+		Patronato Penitenciário de Ponta Porã
+		Unidade Mista de Monitoramento Virtual Estadual
+		Unidade Penal Ricardo Brandão
+
+	Rio Brilhante
+		Estabelecimento Penal de Rio Brilhante
+		Estabelecimento Penal Feminino de Rio Brilhante
+
+	São Gabriel do Oeste
+		Estabelecimento Penal Feminino de São Gabriel do Oeste
+		Patronato Penitenciário de São Gabriel do Oeste
+
+	Três Lagoas
+		Colônia Penal Industrial Paracelso de Lima Vieira Jesus
+		Estabelecimento Penal Feminino de Três Lagoas
+		Patronato Penitenciário de Três Lagoas
+		Penitenciária de Segurança Média de Três Lagoas
+		Unidade Mista de Monitoramento Virtual Estadual
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+21. Espírito Santo (ES)
+	Cariacica
+		Unidade de Custódia e Tratamento Psiquiátrico (UCTP)
+		Centro Prisional Feminino de Cariacica (CPFC)
+		Penitenciária Semiaberta de Cariacica (PSC)
+
+	Vila Velha
+		Casa de Custódia de Vila Velha (CASCUVV)
+		Centro de Detenção Provisória de Vila Velha (CDPVV)
+		Penitenciária Estadual de Vila Velha I (PEVV I)
+		Penitenciária Estadual de Vila Velha II (PEVV II)
+		Penitenciária Estadual de Vila Velha III (PEVV III)
+		Penitenciária Semiaberta de Vila Velha (PSVV)
+		Penitenciária Estadual de Vila Velha V (PEVV V)
+		Penitenciária Estadual de Vila Velha VI (PEVV VI)
+
+	Viana
+		Centro de Triagem de Viana (CTV)
+		Centro de Detenção Provisória de Viana II (CDPV II)
+		Unidade de Saúde do Sistema Penal (USSP)
+		Penitenciária Agrícola do Espírito Santo (PAES)
+		Penitenciária de Segurança Média I (PSME I)
+		Penitenciária de Segurança Média II (PSME II)
+		Penitenciária de Segurança Máxima I (PSMA I)
+		Penitenciária de Segurança Máxima II (PSMA II)
+
+	Guarapari
+		Centro de Detenção Provisória de Guarapari (CDPG)
+
+	Serra
+		Centro de Detenção Provisória da Serra (CDPS)
+
+	Linhares
+		Penitenciária Regional de Linhares (PRL)
+		Centro de Detenção e Ressocialização de Linhares (CDRL)
+
+	Barra de São Francisco
+		Penitenciária Regional de Barra de São Francisco (PRBSF)
+
+	Colatina
+		Penitenciária Semiaberta Masculina de Colatina (PSMCOL)
+		Centro Prisional Feminino de Colatina (CPFCOL)
+		Centro de Detenção Provisória de Colatina (CDPCOL)
+		Penitenciária de Segurança Média de Colatina (PSMECOL)
+
+	Cachoeiro de Itapemirim
+		Penitenciária Regional de Cachoeiro de Itapemirim (PRCI)
+		Centro Prisional Feminino de Cachoeiro de Itapemirim (CPFCI)
+		Centro de Detenção Provisória de Cachoeiro de Itapemirim (CDPCI)
+
+	Marataízes
+		Centro de Detenção Provisória de Marataízes (CDPM)
+
+	São Domingos do Norte
+		Centro de Detenção Provisória de São Domingos do Norte (CDPSDN)
+
+	Aracruz
+		Centro de Detenção Provisória de Aracruz (CDPA)
+
+	São Mateus
+		Centro de Detenção Provisória de São Mateus (CDPSM)
+		Penitenciária Regional e Semiaberta de São Mateus (PRSM/PSSM)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+22. Minas Gerais (MG)
+	1ª Região Integrada de Segurança Pública (Risp)
+		CARCERAGEM FÓRUM LAFAYETTE
+		Casa do Albergado Presidente Joao Pessoa – (CAPJP)
+		UNIDADE GESTORA DE MONITORAÇÃO ELETRÔNICA (UGME)
+		CENTRAL GERAL DE MONITORAMENTO ELETRÔNICO (CGME)
+		Centro de Remanejamento Provisório Do Sistema Prisional – Gameleira (CERESP – GAMELEIRA)
+		Complexo Penitenciário Feminino Estevão Pinto – (CPFEP)
+		Centro de Remanejamento Provisório do Sistema Prisional – Betim (CERESP -BETIM)
+		Penitenciária Professor Jason Soares Albergaria – (PPJSA)
+		Presídio de São Joaquim de Bicas I – (PRSJB I)
+		
+	2ª Região Integrada de Segurança Pública (Risp)
+		CARCERAGEM FÓRUM CONTAGEM
+		Centro de Remanejamento Provisório do Sistema Prisional – Contagem (CERESP - CONTAGEM)
+		Complexo Penitenciário Nelson Hungria – (CPNH)
+		Presídio de Juatuba – (PRJUA)
+		Centro de Apoio Medico e Pericial – (CAMP)
+		Penitenciária José Maria Alkimin – (PJMA)
+		Complexo Público Privado de Ribeirão das Neves I – (CPPPI)
+		Complexo Público Privado de Ribeirão das Neves II – (CPPPII)
+		Complexo Público Privado de Ribeirão das Neves III – (CPPPIII)
+		Presidio Antônio Dutra Ladeira – (PRADL)
+		Presídio José Abranches Gonçalves – (PJAG)
+		Presidio Inspetor Jose Martinho Drumond – (PIJMD)
+		
+	3ª Região Integrada de Segurança Pública (Risp)
+		Presídio de Caeté – (PRCET)
+		Presídio de Jaboticatubas – (PRJBU)
+		Presídio de Lagoa Santa – (PRLGT)
+		Presídio de Mariana – (PRMNA)
+		Presídio de Nova Lima – (PRNLA)
+		Presídio de Ouro Preto – (PROPT)
+		Presídio de Santa Luzia – (PRSLU)
+		Centro de Referência à Gestante Privada de Liberdade (CRGPL)
+		Presídio de Vespasiano – (PRVPN)
+
+	4ª Região Integrada de Segurança Pública (Risp)
+		Presídio de Além Paraíba – (PRAPB)
+		Presídio de Bicas – (PRBIC)
+		Presídio de Carangola – (PRCAR)
+		Presídio de Cataguases – (PRCTS)
+		Presídio de Eugenópolis – (PREUG)
+		Presídio de Ervália – (PRERV)
+		Casa do Albergado José Alencar Rogedo – (CAJAR)
+		Centro de Remanejamento Provisório do Sistema Prisional - Juiz de Fora (CERESP - JUIZ DE FORA)
+		Penitenciária José Edson Cavalieri – (PJEC)
+		Anexo Masculino Semiaberto – PJEC
+		Anexo Feminino Eliane Betti – PJEC
+		Penitenciária Professor Ariosvaldo Campos Pires – (PPACP)
+		Presídio de Leopoldina – (PRLPD)
+		Presídio de Matias Barbosa – (PRMTB)
+		Penitenciária Doutor Manoel Martins Lisboa Junior – (PDMMLJ)
+		Presídio de Muriaé – (PRMUR)
+		Presídio de Rio Pomba – (PRRPB)
+		Presídio de Ubá – (PRUBA)
+		Presídio de Viçosa – (PRVIÇ)
+		Presídio de Visconde do Rio Branco – (PRVRB)
+
+	5ª Região Integrada de Segurança Pública (Risp)
+		Presídio de Araxá – (PRARX)
+		Presídio de Frutal – (PRFRU)
+		Presídio de Itapagipe – (PRITP)
+		Presídio de Perdizes – (PRPDZ)
+		Presídio de Sacramento – (PRSCR)
+		Penitenciária Professor Aluizio Ignácio de Oliveira – (PPAIO)
+
+	6ª Região Integrada de Segurança Pública (Risp)
+		Presídio de Boa Esperança – (PRBES)
+		Presídio de Campo Belo – (PRCBE)
+		Presídio de Lavras – (PRLAV)
+		Presídio Doutor Nelson Pires – (PRDNP)
+		Penitenciária de Três Corações – (PTRC)
+		Presídio de Três Pontas – (PRTRP)
+		Presídio de Varginha – (PRVAR)
+
+	7ª Região Integrada de Segurança Pública (Risp)
+		Presídio de Abaeté – (PRABT)
+		Presídio de Arcos – (PRARC)
+		Presídio de Bom Despacho – (PRBDE)
+		Presídio de Floramar – (PRFLR)
+		Penitenciária de Formiga – (PFMG)
+		Presídio de Itaúna – (PRITN)
+		Presídio de Lagoa da Prata – (PRLGP)
+		Presídio de Luz – (PRLUZ)
+		Presídio de Nova Serrana – (PRNSA)
+		Complexo Penitenciário Doutor Pio Canedo – (CPDPC)
+
+	8ª Região Integrada de Segurança Pública (Risp)
+		Presídio de Aimorés – (PRAMR)
+		Presídio de Conselheiro Pena – (PRCPE)
+		Penitenciária Francisco Floriano de Paula – (PFFP)
+		Presídio de Governador Valadares – (PRGVR)
+		Presídio de Guanhães – (PRGNH)
+		Presídio de Mantena – (PRMTN)
+		Presídio de Peçanha – (PRPÇN)
+		Presídio de São João Evangelista – (PRSJE)
+		Presídio de Tarumirim – (PRTMM)
+
+	9ª Região Integrada de Segurança Pública (Risp)
+		Presídio de Araguari – (PRARG)
+		Presídio de Canápolis – (PRCNP)
+		Presídio de Ituiutaba – (PRITT)
+		Presídio de Prata – (PRPRT)
+		Presídio de Santa Vitória – (PRSVT)
+		Presídio de Tupaciguara – (PRTUP)
+		Penitenciária Professor João Pimenta da Veiga – (PPJPV)
+		Presídio Professor Jacy de Assis – (PRPJA)
+
+	10ª Região Integrada de Segurança Pública (Risp)
+		Complexo Penitenciário Nossa Senhora do Carmo – (CPNSC)
+		Presídio Sargento Jorge – (PRSJ)
+		Presídio de Monte Carmelo – (PRMCR)
+		Presídio Sebastião Satiro – (PRSST)
+		Penitenciária Deputado Expedito de Faria Tavares – (PDEFT)
+		Presídio Presidente Olegário – (PRPOL)
+
+	11ª Região Integrada de Segurança Pública (Risp)
+		Presídio de Bocaiúva – (PRBOC)
+		Penitenciária de Francisco Sá – (PFRS)
+		Presídio de Itacarambi – (PRIBI)
+		Presídio de Janaúba – (PRJNB)
+		Presídio de Januária – (PRJNR)
+		Presídio de Manga – (PRMNG)
+		Presídio de Monte Azul – (PRMAZ)
+		Presídio Alvorada – (PRALV)
+		Presídio Regional de Montes Claros – (PRMOC)
+		Presídio de Porteirinha – (PRPOR)
+		Presídio de Salinas – (PRSAL)
+		Presídio de São Francisco – (PRSFR)
+		Presídio de São João da Ponte – (PRSJP)
+		Presídio de Taiobeiras – (PRTAI)
+
+	12ª Região Integrada de Segurança Pública (Risp)
+		Presídio de Abre Campo – (PRACP)
+		Presídio de Açucena – (PRAÇN)
+		Presídio de Barão de Cocais – (PRBCO)
+		Presídio de Caratinga – (PRCRT)
+		Presídio de Coronel Fabriciano – (PRCFB)
+		Presídio de Inhapim – (PRINP)
+		Penitenciária Dênio Moreira de Carvalho – (PDMC)
+		Centro de Remanejamento Provisório do Sistema Prisional - Ipatinga (CERESP - IPATINGA)
+		Presídio de João Monlevade – (PRJMO)
+		Presídio de Manhuaçu – (PRMÇU)
+		Presídio de Manhumirim – (PRMMR)
+		Presídio de Nova Era – (PRNER)
+		Complexo Penitenciário de Ponte Nova – (CPPN)
+		Presídio de Timóteo – (PRTIM)
+
+	13ª Região Integrada de Segurança Pública (Risp)
+		Hospital Psiquiátrico e Judiciário Jorge Vaz – (HPJJV)
+		Presídio de Barbacena – (PRBBC)
+		Presídio de Congonhas – (PRCGN)
+		Presídio de Conselheiro Lafaiete – (PRCLF)
+		Presídio de Resende Costa – (PRREC)
+		Presídio de Santos Dumont – (PRSDU)
+		Presídio de São João Del Rei – (PRSJR)
+
+	14ª Região Integrada de Segurança Pública (Risp)
+		Presídio de Capelinha – (PRCAP)
+		Presídio de Corinto – (PRCTO)
+		Presídio de Curvelo – (PRCUR)
+		Presídio de Diamantina – (PRDIA)
+		Presídio de Itamarandiba – (PRITM)
+		Presídio de Pirapora – (PRPRP)
+		Presídio de Serro – (PRSER)
+		Presídio de Três Marias – (PRTRM)
+		Presídio de Turmalina – (PRTUR)
+		Presídio de Várzea da Palma – (PRVZP)
+
+	15ª Região Integrada de Segurança Pública (Risp)
+		Presídio de Águas Formosas – (PRAGF)
+		Presídio de Almenara – (PRALM)
+		Presídio Doutor Carlos Vitoriano – (PRDCV)
+		Presídio de Carlos Chagas – (PRCAC)
+		Presídio de Itambacuri – (PRIBC)
+		Presídio de Itaobim – (PRIBM)
+		Presídio de Jacinto – (PRJAC)
+		Presídio de Jequitinhonha – (PRJEQ)
+		Presídio de Malacacheta – (PRMCT)
+		Presídio de Nanuque – (PRNNQ)
+		Presídio de Novo Cruzeiro – (PRNOC)
+		Presídio de Pedra Azul – (PRPAZ)
+		Penitenciária de Teófilo Otoni – (PTFL)
+		Presídio de Teófilo Otoni – (PRTFL)
+
+	16ª Região Integrada de Segurança Pública (Risp)
+		Presídio de Buritis – (PRBII)
+		Presídio de João Pinheiro – (PRJOP)
+		Presídio de Paracatu – (PRPRC)
+		Penitenciária Agostinho de Oliveira Júnior – (PAOJ)
+		Presídio de Unaí – (PRUNI)
+
+	17ª Região Integrada de Segurança Pública (Risp)
+		Presídio de Extrema – (PREXT)
+		Presídio de Itajubá – (PRITJ)
+		Presídio de Pouso Alegre – (PRPOA)
+		Presídio de Santa Rita do Sapucaí – (PRSRS)
+		Presídio de São Lourenço – (PRSLO)
+
+	18ª Região Integrada de Segurança Pública (Risp)
+		Presídio de Alfenas – (PRALF)
+		Presídio de Andradas – (PRADD)
+		Presídio de Campos Gerais – (PRCGE)
+		Presídio de Guaranésia/Guaxupé – (PRGGP)
+		Presídio de Machado – (PRMCH)
+		Presídio de Monte Santo de Minas – (PRMSM)
+		Presídio de Passos – (PRPAS)
+		Presídio de Piumhi – (PRPIU)
+		Presídio de Poços de Caldas – (PRPCD)
+		Presídio de São Sebastião do Paraíso – (PRSSP)
+																	
+	19ª Região Integrada de Segurança Pública (Risp)
+		Casa de Custódia do Policial Penal e Agente de Segurança Socioeducativo – (CCPPASE)
+		Presídio Promotor José Costa – (PRPCJ)
+		Presídio de Pedro Leopoldo – (PRPLO)
+
+	
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+23. Rio de Janeiro (RJ)
+	Capital
+		Casa do Albergado Crispim Ventino
+		Cadeia Pública José Frederico Marques
+		Instituto de Perícias Heitor Carrilho
+		Instituto Penal Cândido Mendes
+		Instituto Penal Oscar Stevenson
+		Patronato Magarinos Torres
+		Presídio Ary Franco
+		Presídio Evaristo de Moraes
+
+	Niterói e Interior
+		Cadeia Pública Constantino Cokotós
+		Cadeia Pública Cotrin Neto
+		Presídio Dalton Crespo de Castro
+		Cadeia Pública Franz de Castro Holzwarth
+		Cadeia Pública Hélio Gomes
+		Cadeia Pública Isap Tiago Teles de Castro Domingues
+		Cadeia Pública Juíza Patrícia Acioli
+		Presídio Romeiro Neto
+		Colônia Agrícola Marco Aurélio Vergas Tavares de Mattos
+		Hospital de Custódia e Tratamento Psiquiátrico Henrique Roxo
+		Instituto Penal Edgard Costa
+		Instituto Penal Ismael Pereira Sirieiro
+		Patronato Magarinos Torres Anexo de Volta Redonda
+		Penitenciária Carlos Tinoco da Fonseca
+		Penitenciária Coronel PM Francisco Spargoli Rocha
+		Cadeia Pública Luis Cesar Fernandes Bandeira Duarte
+		Penitenciária Milton Dias Moreira
+		Cadeia Pública Norberto Ferreira de Moraes
+		Presídio João Carlos da Silva
+		Presídio Nilza da Silva Santos
+
+	Complexo de Gericinó
+		Instituto Penal Djanira Dolores de Oliveira
+		Cadeia Pública Jorge Santana
+		Cadeia Pública Inspetor José Antônio da Costa Barros
+		Cadeia Pública Paulo Roberto Rocha
+		Presídio Pedro Melo da Silva
+		Presídio Pedrolino Werling de Oliveira
+		Cadeia Pública Joaquim Ferreira de Souza
+		Hospital Dr. Hamilton Agostinho Vieira de Castro
+		Hospital Psiquiátrico Penal Roberto Medeiros
+		Instituto Penal Benjamin de Moraes Filho
+		Instituto Penal Plácido Sá Carvalho
+		Instituto Penal Vicente Piragibe
+		Penitenciária Alfredo Tranjan
+		Penitenciária Bandeira Stampa
+		Penitenciária Dr. Serrano Neves
+		Penitenciária Gabriel Ferreira de Castilho
+		Penitenciária Industrial Esmeraldino Bandeira
+		Penitenciária Jonas Lopes de Carvalho
+		Penitenciária Laércio da Costa Pelegrino
+		Penitenciária Lemos Brito
+		Penitenciária Moniz Sodré
+		Penitenciária Talavera Bruce
+		Presídio Elizabeth Sá Rego
+		Presídio Nelson Hungria
+		Sanatório Penal
+		Unidade Materno Infantil (UMI) – Creche e Maternidade
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+24. São Paulo (SP)
+	Penitenciárias
+		Álvaro de Carvalho – Penitenciária I "Valentim Alves da Silva"
+		Álvaro de Carvalho – Penitenciária II
+		Andradina – Penitenciária "ASP Anísio Aparecido de Oliveira"
+		Araraquara – Penitenciária "Dr. Sebastião Martins Silveira"
+		Assis – Penitenciária
+		Avanhandava – Penitenciária "Valdic Junio Alves Primo"
+		Avaré – Penitenciária I "Dr. Paulo Luciano de Campos"
+		Avaré – Penitenciária II "Nelson Marcondes do Amaral"
+		Balbinos – Penitenciária I "Rodrigo dos Santos Freitas"
+		Balbinos – Penitenciária II "Gilmar Monteiro de Souza"
+		Bernardino de Campos – Penitenciária
+		Caiuá – Penitenciária "Bruno Luiz Airoldi Leite"
+		Capela do Alto – Penitenciária I
+		Capela do Alto – Penitenciária II "Dr. Enio Mendes Junior"
+		Casa Branca – Penitenciária "Joaquim de Sylos Cintra"
+		Cerqueira César – Penitenciária I
+		Cerqueira César – Penitenciária II
+		Dracena – Penitenciária "ASP Adriano Aparecido de Pieri"
+		Flórida Paulista – Penitenciária "AEVP Cristiano Oliveira"
+		Florínea – Penitenciária
+		Franca – Penitenciária
+		Franco da Rocha – Penitenciária I "Mário Moura Albuquerque"
+		Franco da Rocha – Penitenciária II "Nilton Silva"
+		Franco da Rocha – Penitenciária III "José Aparecido Ribeiro"
+		Gália – Penitenciária I
+		Gália – Penitenciária II
+		Getulina – Penitenciária "Osiris Souza e Silva"
+		Guareí – Penitenciária I "Nelson Vieira"
+		Guareí – Penitenciária II
+		Guarulhos – Penitenciária I "José Parada Neto"
+		Guarulhos – Penitenciária II "Adriano Marrey"
+		Hortolândia – Penitenciária II "Odete Leite de Campos Critter"
+		Hortolândia – Penitenciária III
+		Iaras – Penitenciária "Orlando Brando Filinto"
+		Iperó – Penitenciária "Odon Ramos Maranhão"
+		Irapuru – Penitenciária
+		Itaí – Penitenciária "Cabo PM Marcelo Pires da Silva"
+		Itapetininga – Penitenciária I "Jairo de Almeida Bueno"
+		Itapetininga – Penitenciária II "ASP Maria Filomena de Sousa Dias"
+		Itatinga – Penitenciária
+		Itirapina – Penitenciária I "Dr. Antônio de Queiróz Filho"
+		Itirapina – Penitenciária II "João Batista de Arruda Sampaio"
+		Junqueirópolis – Penitenciária
+		Lavínia – Penitenciária I "Vereador Frederico Geometti"
+		Lavínia – Penitenciária II "Luis Aparecido Fernandes"
+		Lavínia – Penitenciária III "ASP Paulo Guimarães"
+		Limeira – Penitenciária
+		Lucélia – Penitenciária
+		Mairinque – Penitenciária
+		Marabá Paulista – Penitenciária Compacta "João Augustinho Panucci"
+		Marília – Penitenciária "José Luiz Mansur"
+		Martinópolis – Penitenciária "Tacyan Menezes de Lucena"
+		Mirandópolis – Penitenciária I "Nestor Canoa"
+		Mirandópolis – Penitenciária II "ASP Lindolfo Terçariol Filho"
+		Osvaldo Cruz – Penitenciária
+		Pacaembu – Penitenciária "Ozias Lúcio dos Santos"
+		Paraguaçu Paulista – Penitenciária Compacta
+		Piracicaba – Penitenciária "ASP Luís Ricardo Jock Stoduto"
+		Pirajuí – Penitenciária I "Dr. Walter Faria Pereira de Queiróz"
+		Pirajuí – Penitenciária II "Luiz Gonzaga Vieira"
+		Pontal – Penitenciária
+		Potim – Penitenciária I "AEVP Jair Guimarães de Lima"
+		Potim – Penitenciária II
+		Pracinha – Penitenciária Compacta
+		Presidente Bernardes – Penitenciária "Silvio Yoshihiko Hinohara"
+		Presidente Prudente – Penitenciária "Wellington Rodrigo Segura"
+		Presidente Venceslau – Penitenciária I "Zwinglio Ferreira"
+		Presidente Venceslau – Penitenciária II "Maurício Henrique Guimarães Pereira"
+		Reginópolis – Penitenciária I "Tenente PM José Alfredo Cintra Borin"
+		Reginópolis – Penitenciária II "Sgto. PM Antonio Luiz de Souza"
+		Registro – Penitenciária
+		Ribeirão Preto – Penitenciária
+		Riolândia – Penitenciária "João Batista de Santana"
+		São Paulo – Penitenciária da Capital
+		São Paulo – Penitenciária "ASP Joaquim Fonseca Lopes" de Parelheiros
+		São Vicente – Penitenciária I "Dr. Geraldo de Andrade Vieira"
+		São Vicente – Penitenciária II
+		Serra Azul – Penitenciária I
+		Serra Azul – Penitenciária II
+		Serra Azul – Penitenciária III "ASP Sandro Alves da Silva"
+		Sorocaba – Penitenciária I "Dr. Danilo Pinheiro"
+		Sorocaba – Penitenciária II "Dr. Antônio de Souza Neto"
+		Taiúva – Penitenciária
+		Taquarituba – Penitenciária
+		Tremembé – Penitenciária I "Dr. Tarcizo Leonce Pinheiro Cintra"
+		Tremembé – Penitenciária II "Dr. José Augusto César Salgado"
+		Tupi Paulista – Penitenciária "Vanderlei Tartari Monteiro"
+		Valparaíso – Penitenciária
+
+	Centros de Detenção Provisória (CDP)
+		Aguaí – CDP
+		Americana – CDP "AEVP Renato Gonçalves Rodrigues"
+		Bauru – CDP "ASP Francisco Carlos Caneschi"
+		Caiuá – CDP "Tácio Aparecido Santana"
+		Campinas – CDP
+		Caraguatatuba – CDP "Dr. José Eduardo Mariz de Oliveira"
+		Diadema – CDP
+		Franco da Rocha – CDP
+		Guarulhos – CDP I "ASP Giovani Martins Rodrigues"
+		Guarulhos – CDP II
+		Hortolândia – CDP
+		Icém – CDP "Marcos Amilton Raysaro"
+		Itapecerica da Serra – CDP "ASP Nilton Celestino"
+		Jundiaí – CDP "Marcos Antônio Alves Bezerra"
+		Lavínia – CDP "ASP Cláudio Chaves do Nascimento"
+		Mauá – CDP
+		Mogi das Cruzes – CDP
+		Nova Independência – CDP
+		Osasco – CDP I "ASP Ederson Vieira de Jesus"
+		Osasco – CDP II "ASP Vanda Rita Brito do Rego"
+		Pacaembu – CDP I
+		Pacaembu – CDP II
+		Paulo de Faria – CDP
+		Piracicaba – CDP "Nelson Furlan"
+		Praia Grande – CDP "ASP Charles Demitre Teixeira"
+		Ribeirão Preto – CDP "ASP Nayan Xavier Ribeiro"
+		Riolândia – CDP "ASP Valdecir Fabiano"
+		Santo André – CDP
+		São Bernardo do Campo – CDP "Dr. Calixto Antonio"
+		São José dos Campos – CDP
+		São José do Rio Preto – CDP
+		São Paulo – CDP I de Chácara Belém
+		São Paulo – CDP II de Chácara Belém
+		São Paulo – CDP I de Pinheiros
+		São Paulo – CDP II de Pinheiros
+		São Paulo – CDP III de Pinheiros
+		São Paulo – CDP IV de Pinheiros
+		São Paulo – CDP de Vila Independência
+		São Vicente – CDP "Luis Cesar Lacerda"
+		Sorocaba – CDP
+		Suzano – CDP
+		Taubaté – CDP "Dr. Félix Nobre de Campos"
+
+	Centros de Progressão Penitenciária (CPP)
+		Bauru – CPP I "Dr. Alberto Brocchieri"
+		Bauru – CPP II "Dr. Eduardo de Oliveira Vianna"
+		Bauru – CPP III "Prof. Noé Azevedo"
+		Campinas – CPP "Prof. Ataliba Nogueira"
+		Franco da Rocha – CPP "ASP Moises Marcos Braga"
+		Guariba – CPP
+		Hortolândia – CPP
+		Jardinópolis – CPP
+		Mongaguá – CPP "Dr. Rubens Aleixo Sendin"
+		Pacaembu – CPP
+		Porto Feliz – CPP "Dr. Walter Erwin Hoffgen"
+		São José do Rio Preto – CPP "Dr. Javert de Andrade"
+		São Vicente – CPP
+		Tremembé – CPP "Dr. Edgard Magalhães Noronha"
+		Valparaíso – CPP
+
+	Centros de Ressocialização (CR)
+		Araçatuba – CR
+		Araraquara – CR
+		Atibaia – CR
+		Avaré – CR "Dr. Mauro de Macedo"
+		Birigui – CR
+		Bragança Paulista – CR
+		Itapetininga – CR
+		Jaú – CR "Dr. João Eduardo Franco Perlati"
+		Limeira – CR
+		Lins – CR "Dr. Manoel Carlos Muniz"
+		Marília – CR
+		Mococa – CR
+		Mogi Mirim – CR "Prefeito João Missaglia"
+		Ourinhos – CR
+		Presidente Prudente – CR "ASP Gláucio Reinaldo Mendes Pereira"
+		Rio Claro – CR "Dr Luis Gonzaga da Arruda Campos"
+		Sumaré – CR
+
+	Centro de Readaptação Penitenciária
+		Presidente Bernardes – Centro de Readaptação Penitenciária "Dr. José Ismael Pedrosa"
+
+	Hospitais e Unidades de Custódia
+		Franco da Rocha – Hospital de Custódia e Tratamento Psiquiátrico I "Professor André Teixeira Lima"
+		Franco da Rocha – Hospital de Custódia e Tratamento Psiquiátrico II
+		Taubaté – Hospital de Custódia e Tratamento Psiquiátrico "Dr. Arnaldo Amado Ferreira"
+		São Paulo – Divisão de Ações de Segurança Hospitalar
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+25. Paraná (PR)
+		Colônia Penal Agroindustrial (CPAI)
+		Casa de Custódia de Curitiba (CCC)
+		Casa de Custódia de Piraquara (CCP)
+		Casa de Custódia de São José dos Pinhais (CCSJP)
+		Complexo Médico-Penal do Paraná (CMP)
+		Penitenciária Central do Estado – Unidade de Progressão (PCE-UP)
+		Penitenciária Central do Estado II – Unidade de Segurança (PCE II-US)
+		Penitenciária Feminina do Paraná (PFP)
+		Penitenciária Estadual de Piraquara (PEP)
+		Penitenciária Estadual de Piraquara II (PEP II)
+		Centro de Integração Social (CIS)
+		Penitenciária Estadual de Ponta Grossa – Unidade de Segurança (PEPG-US)
+		Penitenciária Estadual de Ponta Grossa – Unidade de Progressão (PEPG-UP)
+		Centro de Regime Semiaberto da Lapa (CRSL)
+		Penitenciária Industrial de Guarapuava (PIG)
+		Penitenciária Estadual de Guarapuava – Unidade de Progressão (PEG-UP)
+		Penitenciária Estadual de Londrina I (PEL)
+		Penitenciária Estadual de Londrina II (PEL II)
+		Centro de Reintegração Social de Londrina (CRESLON)
+		Patronato Penitenciário e Escritório Social de Londrina
+		Centro Integrado de Triagem de Londrina (CITL)
+		Casa de Custódia de Londrina (CCL)
+		Penitenciária Estadual de Maringá (PEM)
+		Penitenciária Estadual de Cruzeiro do Oeste (PECO)
+		Penitenciária Estadual de Francisco Beltrão (PFB)
+		Penitenciária Industrial Marcelo Pinheiro (PIMP)
+		Penitenciária Estadual Thiago Borges de Carvalho (PETBC)
+		Penitenciária Estadual de Foz do Iguaçu (PEF)
+		Penitenciária Estadual de Foz do Iguaçu II (PEF II)
+		Penitenciária Feminina de Foz do Iguaçu – Unidade de Progressão (PFF-UP)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+26. Rio Grande do Sul (RS)
+	1ª DRPP – Vale dos Sinos e Litoral (sede em Canoas)
+		Complexo Prisional de Canoas
+		Instituto Penal de Canoas
+		Instituto Penal de Monitoramento Eletrônico da 1ª Região
+		Instituto Penal de Montenegro
+		Instituto Penal de Novo Hamburgo
+		Instituto Penal de São Leopoldo
+		Penitenciária Estadual de Canoas
+		Penitenciária Estadual de Sapucaia do Sul
+		Penitenciária Modulada Estadual de Montenegro
+		Penitenciária Modulada Estadual de Osório
+		Presídio Estadual de Taquara
+		Presídio Estadual Feminino de Torres
+
+	2ª DRPP – Região Central (sede em Santa Maria)
+		Instituto Penal de Monitoramento Eletrônico da 2ª Região
+		Penitenciária Estadual de Santa Maria
+		Presídio Estadual de Agudo
+		Presídio Estadual de Caçapava do Sul
+		Presídio Estadual de Cacequi
+		Presídio Estadual de Jaguari
+		Presídio Estadual de Júlio de Castilhos
+		Presídio Estadual de Santiago
+		Presídio Estadual de São Francisco de Assis
+		Presídio Estadual de São Sepé
+		Presídio Estadual de São Vicente do Sul
+		Presídio Regional de Santa Maria
+
+	3ª DRPP – Missões e Noroeste (sede em Santo Ângelo)
+		Instituto Penal de Ijuí
+		Instituto Penal de Monitoramento Eletrônico da 3ª Região
+		Instituto Penal de Santo Ângelo
+		Penitenciária Modulada de Ijuí
+		Presídio Estadual de Cerro Largo
+		Presídio Estadual de Cruz Alta
+		Presídio Estadual de Santa Rosa
+		Presídio Estadual de Santo Cristo
+		Presídio Estadual de São Luiz Gonzaga
+		Presídio Estadual de Três Passos
+		Presídio Regional de Santo Ângelo
+
+	4ª DRPP – Alto Uruguai (sede em Passo Fundo)
+		Instituto Penal de Monitoramento Eletrônico da 4ª Região
+		Instituto Penal de Passo Fundo
+		Penitenciária Estadual de Passo Fundo
+		Presídio Estadual de Carazinho
+		Presídio Estadual de Erechim
+		Presídio Estadual de Espumoso
+		Presídio Estadual de Frederico Westphalen
+		Presídio Estadual de Getúlio Vargas
+		Presídio Estadual de Iraí
+		Presídio Estadual de Lagoa Vermelha
+		Presídio Estadual de Palmeira das Missões
+		Presídio Estadual de Sarandi
+		Presídio Estadual de Soledade
+		Presídio Regional de Passo Fundo
+
+	5ª DRPP – Sul (sede em Pelotas)
+		Instituto Penal de Monitoramento Eletrônico da 5ª Região
+		Penitenciária Estadual de Rio Grande
+		Presídio Estadual de Camaquã
+		Presídio Estadual de Canguçu
+		Presídio Estadual de Jaguarão
+		Presídio Estadual de Santa Vitória do Palmar
+		Presídio Regional de Pelotas
+
+	6ª DRPP – Campanha (sede em Santana do Livramento)
+		Instituto Penal de Bagé
+		Instituto Penal de Monitoramento Eletrônico da 6ª Região
+		Instituto Penal de Uruguaiana
+		Penitenciária Estadual de Santana do Livramento
+		Penitenciária Modulada Estadual de Uruguaiana
+		Presídio Estadual de Alegrete
+		Presídio Estadual de Dom Pedrito
+		Presídio Estadual de Itaqui
+		Presídio Estadual de Lavras do Sul
+		Presídio Estadual de Quaraí
+		Presídio Estadual de Rosário do Sul
+		Presídio Estadual de São Borja
+		Presídio Estadual de São Gabriel
+		Presídio Regional de Bagé
+
+	7ª DRPP – Serra (sede em Caxias do Sul)
+		Instituto Penal de Monitoramento Eletrônico da 7ª Região
+		Penitenciária Estadual de Bento Gonçalves
+		Penitenciária Estadual de Caxias do Sul
+		Presídio Estadual de Canela
+		Presídio Estadual de Guaporé
+		Presídio Estadual de Nova Prata
+		Presídio Estadual de São Francisco de Paula
+		Presídio Estadual de Vacaria
+		Presídio Regional de Caxias do Sul
+
+	8ª DRPP – Vale do Rio Pardo (sede em Santa Cruz do Sul)
+		Instituto Penal de Monitoramento Eletrônico da 8ª Região
+		Penitenciária Estadual de Venâncio Aires
+		Presídio Estadual de Arroio do Meio
+		Presídio Estadual de Cachoeira do Sul
+		Presídio Estadual de Candelária
+		Presídio Estadual de Encantado
+		Presídio Estadual de Encruzilhada do Sul
+		Presídio Estadual de Lajeado
+		Presídio Estadual de Sobradinho
+		Presídio Estadual Feminino de Lajeado Miguel Alcides Feldens
+		Presídio Estadual Feminino de Rio Pardo
+		Presídio Regional de Santa Cruz do Sul
+
+	9ª DRPP – Carbonífera (sede em Charqueadas)
+		Centro de Custódia Hospitalar de Charqueadas
+		Colônia Penal Agrícola de Charqueadas
+		Instituto Penal de Charqueadas
+		Penitenciária Estadual de Arroio dos Ratos
+		Penitenciária Estadual de Charqueadas
+		Penitenciária Estadual do Jacuí
+		Penitenciária Modulada Estadual de Charqueadas
+
+	10ª DRPP – Porto Alegre
+		Centro de Custódia Hospitalar Feminino de Guaíba
+		Centro de Custódia Hospitalar Vila Nova
+		Patronato Lima Drummond
+		Penitenciária Estadual de Porto Alegre
+		Presídio Estadual Feminino Madre Pelletier
+		Instituto Penal Feminino de Porto Alegre
+		Instituto Penal Irmão Miguel Dario
+		Instituto Penal de Gravataí
+		Penitenciária Estadual Feminina de Guaíba
+		Instituto Penal de Monitoração Eletrônica
+
+	Unidades Especiais
+		Instituto Penal de Monitoramento Eletrônico da Região Metropolitana
+		Penitenciária de Alta Segurança de Charqueadas
+		Núcleo de Gestão Estratégica do Sistema Prisional (NUGESP)
+		Penitenciária Estadual de Charqueadas II
+		Instituto Psiquiátrico Forense
+		Cadeia Pública de Porto Alegre         
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+27. Santa Catarina (SC)
+	Grande Florianópolis
+		Biguaçu – Presídio
+		São Pedro de Alcântara – Penitenciária
+		Tijucas – Presídio
+		Florianópolis - Casa Albergado
+		Florianópolis – HCTP
+		Florianópolis – Penitenciária
+		Florianópolis – Presídio Feminino
+		Florianópolis – Presídio Masculino
+		Palhoça – SSP – CAPH Colônia Agrícola
+		
+	Sul Catarinense 
+		Araranguá – Presídio
+		Criciúma – Penitenciária e Presídio
+		Imbituba – Unidade Prisional Avançada (UPA)
+		Laguna – Unidade Prisional Avançada (UPA)
+		Tubarão – Presídio Masculino
+		Tubarão – Presídio Regional Feminino
+		
+	Norte e Nordeste Catarinense
+		Canoinhas – Unidade Prisional Avançada (UPA)
+		Barra Velha – Unidade Prisional Avançada (UPA)
+		Jaraguá do Sul – Presídio
+		Joinville – Penitenciária e Presídio
+		Mafra – Presídio
+		Porto União – Unidade Prisional Avançada (UPA)
+		São Francisco do Sul – Unidade Prisional Avançada (UPA)
+		
+	Vale do Itajaí
+		Blumenau – Penitenciária e Presídio
+		Brusque – Unidade Prisional Avançada (UPA)
+		Rio do Sul – Presídio
+		Indaial – Unidade Prisional Avançada (UPA)
+		
+	Foz do Rio Itajaí
+		Itajaí – Penitenciária e Presídio
+		Itapema – Unidade Prisional Avançada (UPA)
+		
+	Meio Oeste e Serra Catarinense
+		Caçador – Presídio
+		Campos Novos – Unidade Prisional Avançada (UPA)
+		Concórdia – Presídio
+		Lages – Presídio
+		Joaçaba – Presídio Regional
+		São Cristóvão do Sul  – Penitenciária
+		São Joaquim – Unidade Prisional Avançada (UPA)
+		Videira – Unidade Prisional Avançada (UPA)
+		
+	Grande Oeste
+		Chapecó – Penitenciária e Presídio
+		Maravilha – Unidade Prisional Avançada (UPA)
+		São José do Cedro – Unidade Prisional Avançada (UPA)
+		São Miguel do Oeste – Unidade Prisional Avançada (UPA)
+		Xanxerê - Presídio

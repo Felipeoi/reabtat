@@ -70,7 +70,10 @@ function ProtectedRoute({ children, requiredRole }: { children: React.ReactNode;
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/login" replace />} />
+      <Route
+        path="/"
+        element={<Navigate to={isAuthed() ? '/inmates' : '/login'} replace />}
+      />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
 

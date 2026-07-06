@@ -16,8 +16,6 @@ type UpdateRepo struct{ pool *pgxpool.Pool }
 
 func NewUpdateRepo(pool *pgxpool.Pool) *UpdateRepo { return &UpdateRepo{pool: pool} }
 
-// PUT: atualiza TODOS os campos do registro.
-// Retorna o id atualizado. Se não encontrar, retorna pgx.ErrNoRows.
 func (r *UpdateRepo) Execute(ctx context.Context, in entity.InmatesFlat, userID int64) (error, context.Context, int) {
 	if in.Id == nil {
 		return ErrMissingID, ctx, 0
@@ -26,35 +24,46 @@ func (r *UpdateRepo) Execute(ctx context.Context, in entity.InmatesFlat, userID 
 	attorney := pgtype.Text{String: in.Responsible.Attorney, Valid: in.Responsible.Attorney != ""}
 	phone := pgtype.Text{String: in.Responsible.Phone, Valid: in.Responsible.Phone != ""}
 
-	var id int
-	err := r.pool.QueryRow(ctx, updateInmateSQL,
-		*in.Id,           // $1 id
-		userID,           // $2 user_id
-		in.Custody,       // $3 custody
-		in.OriginID,      // $4 origin_id
-		in.DestinationID, // $5 destination_id
-		attorney,         // $6 responsible_attorney
-		phone,            // $7 responsible_phone
-	).Scan(&id)
+	tx, err := r.pool.Begin(ctx)
+	if err != nil {
+		return err, ctx, 0
+	}
+	defer tx.Rollback(ctx)
 
+	var id int
+	err = tx.QueryRow(ctx, updateInmateSQL,
+		*in.Id,
+		userID,
+		in.Custody,
+		in.OriginUnitID,
+		attorney,
+		phone,
+	).Scan(&id)
 	if err != nil {
 		if errors.Is(err, pgx.ErrNoRows) {
-			// se preferir, mapeie para um erro seu, ex.: ErrInmateNotFound
 			return pgx.ErrNoRows, ctx, 0
 		}
 		return err, ctx, 0
 	}
+
+	if err := ReplaceDestinationUnits(ctx, tx, id, in.DestinationUnitIDs); err != nil {
+		return err, ctx, 0
+	}
+
+	if err := tx.Commit(ctx); err != nil {
+		return err, ctx, 0
+	}
+
 	return nil, ctx, id
 }
 
 const updateInmateSQL = `
 UPDATE resocialization.inmates
 SET
-  custody              = $3,
-  origin_id            = $4,
-  destination_id       = $5,
-  responsible_attorney = $6,
-  responsible_phone    = $7
+  custody                = $3,
+  origin_unit_id         = $4,
+  responsible_attorney   = $5,
+  responsible_phone      = $6
 WHERE id = $1 AND user_id = $2
 RETURNING id;
 `

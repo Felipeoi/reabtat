@@ -32,9 +32,13 @@ export default function Login() {
   return (
     <div className="auth-page">
       <div className="auth-container">
-        <div className="auth-logo">R</div>
+        <img
+          src="/rehabtat-logo.png"
+          alt="Rehab TaT — Reabilitação Transferência a Transferência"
+          className="auth-brand-logo"
+        />
 
-        <h2 className="auth-title">Bem-vindo de volta</h2>
+        <h2 className="auth-title">Bem-vindo</h2>
         <p className="auth-subtitle">Sistema de Ressocialização</p>
 
         <div className="auth-card">

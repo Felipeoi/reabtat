@@ -55,6 +55,11 @@ export default function MatchDetails() {
     }
   };
 
+  const formatUnits = (units?: { name: string; uf_code: string }[]) => {
+    if (!units?.length) return 'N/A';
+    return units.map((unit) => `${unit.name} (${unit.uf_code})`).join(', ');
+  };
+
   if (loading) {
     return (
       <Layout>
@@ -136,20 +141,17 @@ export default function MatchDetails() {
             {/* Localização */}
             <div className="match-details-section">
               <h3 className="match-details-section-title blue">
-                📍 Localização
+                📍 Unidades prisionais
               </h3>
               <div className="match-details-location-card">
                 <p className="match-details-location-type">Origem</p>
-                <p className="match-details-location-name">{match.my_inmate.origin?.name}</p>
-                <p className="match-details-location-state">{match.my_inmate.origin?.uf_code}</p>
-                <p className="match-details-location-code">IBGE: {match.my_inmate.origin?.ibge_code}</p>
+                <p className="match-details-location-name">{match.my_inmate.origin_unit?.name}</p>
+                <p className="match-details-location-state">{match.my_inmate.origin_unit?.uf_code}</p>
               </div>
               <div className="match-details-location-arrow">↓</div>
               <div className="match-details-location-card">
-                <p className="match-details-location-type">Destino Desejado</p>
-                <p className="match-details-location-name">{match.my_inmate.destination?.name}</p>
-                <p className="match-details-location-state">{match.my_inmate.destination?.uf_code}</p>
-                <p className="match-details-location-code">IBGE: {match.my_inmate.destination?.ibge_code}</p>
+                <p className="match-details-location-type">Destinos Desejados</p>
+                <p className="match-details-location-name">{formatUnits(match.my_inmate.destination_units)}</p>
               </div>
             </div>
 
@@ -205,20 +207,17 @@ export default function MatchDetails() {
             {/* Localização */}
             <div className="match-details-section">
               <h3 className="match-details-section-title green">
-                📍 Localização
+                📍 Unidades prisionais
               </h3>
               <div className="match-details-location-card">
                 <p className="match-details-location-type">Origem</p>
-                <p className="match-details-location-name">{match.matched_inmate.origin?.name}</p>
-                <p className="match-details-location-state">{match.matched_inmate.origin?.uf_code}</p>
-                <p className="match-details-location-code">IBGE: {match.matched_inmate.origin?.ibge_code}</p>
+                <p className="match-details-location-name">{match.matched_inmate.origin_unit?.name}</p>
+                <p className="match-details-location-state">{match.matched_inmate.origin_unit?.uf_code}</p>
               </div>
               <div className="match-details-location-arrow">↓</div>
               <div className="match-details-location-card">
-                <p className="match-details-location-type">Destino Desejado</p>
-                <p className="match-details-location-name">{match.matched_inmate.destination?.name}</p>
-                <p className="match-details-location-state">{match.matched_inmate.destination?.uf_code}</p>
-                <p className="match-details-location-code">IBGE: {match.matched_inmate.destination?.ibge_code}</p>
+                <p className="match-details-location-type">Destinos Desejados</p>
+                <p className="match-details-location-name">{formatUnits(match.matched_inmate.destination_units)}</p>
               </div>
             </div>
 
@@ -308,8 +307,8 @@ export default function MatchDetails() {
                 <h4 className="match-details-analysis-info-title">Por que este é um match perfeito?</h4>
                 <p className="match-details-analysis-info-text">
                   Este match é considerado perfeito porque ambos os reeducandos desejam realizar uma troca de localização
-                  que beneficia mutuamente. O reeducando <strong>#{match.my_inmate.id}</strong> quer ir de <strong>{match.my_inmate.origin?.name}</strong> para <strong>{match.my_inmate.destination?.name}</strong>,
-                  enquanto o reeducando <strong>#{match.matched_inmate.id}</strong> quer fazer exatamente o caminho inverso: de <strong>{match.matched_inmate.origin?.name}</strong> para <strong>{match.matched_inmate.destination?.name}</strong>.
+                  que beneficia mutuamente. O reeducando <strong>#{match.my_inmate.id}</strong> quer sair de <strong>{match.my_inmate.origin_unit?.name}</strong> e pode ir para <strong>{formatUnits(match.my_inmate.destination_units)}</strong>,
+                  enquanto o reeducando <strong>#{match.matched_inmate.id}</strong> quer sair de <strong>{match.matched_inmate.origin_unit?.name}</strong> e pode ir para <strong>{formatUnits(match.matched_inmate.destination_units)}</strong>.
                   Além disso, ambos estão no mesmo regime de custódia, facilitando a aprovação da transferência.
                 </p>
               </div>

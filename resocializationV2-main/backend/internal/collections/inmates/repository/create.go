@@ -18,26 +18,41 @@ func (r *CreateRepo) Execute(ctx context.Context, in entity.InmatesFlat) (error,
 	attorney := pgtype.Text{String: in.Responsible.Attorney, Valid: in.Responsible.Attorney != ""}
 	phone := pgtype.Text{String: in.Responsible.Phone, Valid: in.Responsible.Phone != ""}
 
-	err := r.pool.QueryRow(ctx, createInmateSQL,
-		in.Custody,       // custody
-		in.OriginID,      // origin_id
-		in.DestinationID, // destination_id
-		attorney,         // responsible_attorney (NULL se vazio)
-		phone,            // responsible_phone (NULL se vazio)
-		in.UserID,        // user_id
-	).Scan(&id)
+	tx, err := r.pool.Begin(ctx)
+	if err != nil {
+		return err, ctx, 0
+	}
+	defer tx.Rollback(ctx)
 
-	return err, ctx, id
+	err = tx.QueryRow(ctx, createInmateSQL,
+		in.Custody,
+		in.OriginUnitID,
+		attorney,
+		phone,
+		in.UserID,
+	).Scan(&id)
+	if err != nil {
+		return err, ctx, 0
+	}
+
+	if err := ReplaceDestinationUnits(ctx, tx, id, in.DestinationUnitIDs); err != nil {
+		return err, ctx, 0
+	}
+
+	if err := tx.Commit(ctx); err != nil {
+		return err, ctx, 0
+	}
+
+	return nil, ctx, id
 }
 
 var createInmateSQL = `
 INSERT INTO resocialization.inmates (
   custody,
-  origin_id,
-  destination_id,
+  origin_unit_id,
   responsible_attorney,
   responsible_phone,
   user_id
-) VALUES ($1,$2,$3,$4,$5,$6)
+) VALUES ($1,$2,$3,$4,$5)
 RETURNING id;
 `

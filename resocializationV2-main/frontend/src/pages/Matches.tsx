@@ -40,6 +40,11 @@ export default function Matches() {
     }
   };
 
+  const formatUnits = (units?: { name: string; uf_code: string }[]) => {
+    if (!units?.length) return 'N/A';
+    return units.map((unit) => `${unit.name}, ${unit.uf_code}`).join(' · ');
+  };
+
   const handleViewDetails = (myInmateId: number, matchedInmateId: number) => {
     navigate(`/matches/${myInmateId}/${matchedInmateId}`);
   };
@@ -122,13 +127,13 @@ export default function Matches() {
                           <div className="match-info-row">
                             <span className="match-info-label">Origem:</span>
                             <span className="match-info-value">
-                              {match.my_inmate.origin?.name || 'N/A'}, {match.my_inmate.origin?.uf_code || 'N/A'}
+                              {match.my_inmate.origin_unit?.name || 'N/A'}, {match.my_inmate.origin_unit?.uf_code || 'N/A'}
                             </span>
                           </div>
                           <div className="match-info-row">
                             <span className="match-info-label">Destino:</span>
                             <span className="match-info-value">
-                              {match.my_inmate.destination?.name || 'N/A'}, {match.my_inmate.destination?.uf_code || 'N/A'}
+                              {formatUnits(match.my_inmate.destination_units)}
                             </span>
                           </div>
                         </div>
@@ -148,13 +153,13 @@ export default function Matches() {
                           <div className="match-info-row">
                             <span className="match-info-label">Origem:</span>
                             <span className="match-info-value">
-                              {match.matched_inmate.origin?.name || 'N/A'}, {match.matched_inmate.origin?.uf_code || 'N/A'}
+                              {match.matched_inmate.origin_unit?.name || 'N/A'}, {match.matched_inmate.origin_unit?.uf_code || 'N/A'}
                             </span>
                           </div>
                           <div className="match-info-row">
                             <span className="match-info-label">Destino:</span>
                             <span className="match-info-value">
-                              {match.matched_inmate.destination?.name || 'N/A'}, {match.matched_inmate.destination?.uf_code || 'N/A'}
+                              {formatUnits(match.matched_inmate.destination_units)}
                             </span>
                           </div>
                         </div>

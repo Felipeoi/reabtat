@@ -18,43 +18,27 @@ func NewByIdRepo(pool *pgxpool.Pool) *ByIdRepo { return &ByIdRepo{pool: pool} }
 
 func (r *ByIdRepo) Execute(ctx context.Context, id int, userID int64) (error, context.Context, *entity.InmatesResp) {
 	var (
-		idDB          int32
-		custody       string
-		originID      int32
-		destinationID int32
-		attorney      pgtype.Text
-		phone         pgtype.Text
-		ownerUserID   int64
-		// City fields for origin
-		originCityID   int32
-		originIBGECode string
-		originName     string
-		originUFCode   string
-		// City fields for destination
-		destCityID   int32
-		destIBGECode string
-		destName     string
-		destUFCode   string
+		idDB             int32
+		custody          string
+		originUnitID     int32
+		attorney         pgtype.Text
+		phone            pgtype.Text
+		ownerUserID      int64
+		originUnitIDJoin int32
+		originUnitName   string
+		originUnitUF     string
 	)
 
 	err := r.pool.QueryRow(ctx, getInmateByIDSQL, id, userID).Scan(
 		&idDB,
 		&custody,
-		&originID,
-		&destinationID,
+		&originUnitID,
 		&attorney,
 		&phone,
 		&ownerUserID,
-		// Origin city
-		&originCityID,
-		&originIBGECode,
-		&originName,
-		&originUFCode,
-		// Destination city
-		&destCityID,
-		&destIBGECode,
-		&destName,
-		&destUFCode,
+		&originUnitIDJoin,
+		&originUnitName,
+		&originUnitUF,
 	)
 	if err != nil {
 		if errors.Is(err, pgx.ErrNoRows) {
@@ -63,26 +47,30 @@ func (r *ByIdRepo) Execute(ctx context.Context, id int, userID int64) (error, co
 		return err, ctx, nil
 	}
 
+	destMap, err := LoadDestinationUnitsMap(ctx, r.pool, []int{int(idDB)})
+	if err != nil {
+		return err, ctx, nil
+	}
+
+	destUnits := destMap[int(idDB)]
+	if destUnits == nil {
+		destUnits = []entity.PrisonUnit{}
+	}
+
 	resp := &entity.InmatesResp{
-		Id:            int(idDB),
-		Custody:       custody,
-		OriginID:      int(originID),
-		DestinationID: int(destinationID),
-		Origin: &entity.City{
-			ID:       int(originCityID),
-			IBGECode: originIBGECode,
-			Name:     originName,
-			UFCode:   originUFCode,
-		},
-		Destination: &entity.City{
-			ID:       int(destCityID),
-			IBGECode: destIBGECode,
-			Name:     destName,
-			UFCode:   destUFCode,
+		Id:                 int(idDB),
+		Custody:            custody,
+		OriginUnitID:       int(originUnitID),
+		DestinationUnitIDs: DestinationUnitIDs(destUnits),
+		DestinationUnits:   destUnits,
+		OriginUnit: &entity.PrisonUnit{
+			ID:     int(originUnitIDJoin),
+			Name:   originUnitName,
+			UFCode: originUnitUF,
 		},
 		Responsible: entity.InmatesResponsible{
-			Attorney: attorney.String, // vazio se NULL
-			Phone:    phone.String,    // vazio se NULL
+			Attorney: attorney.String,
+			Phone:    phone.String,
 		},
 		UserID: ownerUserID,
 	}
@@ -94,15 +82,12 @@ const getInmateByIDSQL = `
 SELECT
   i.id,
   i.custody,
-  i.origin_id,
-  i.destination_id,
+  i.origin_unit_id,
   i.responsible_attorney,
   i.responsible_phone,
   i.user_id,
-  oc.id, oc.ibge_code, oc.name, oc.uf_code,
-  dc.id, dc.ibge_code, dc.name, dc.uf_code
+  ou.id, ou.name, ou.uf_code
 FROM resocialization.inmates AS i
-LEFT JOIN public.cities AS oc ON i.origin_id = oc.id
-LEFT JOIN public.cities AS dc ON i.destination_id = dc.id
+LEFT JOIN public.prison_units AS ou ON i.origin_unit_id = ou.id
 WHERE i.id = $1 AND i.user_id = $2
 `

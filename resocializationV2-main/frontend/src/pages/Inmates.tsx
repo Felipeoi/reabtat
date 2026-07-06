@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { apiListInmates, apiCreateInmate, apiUpdateInmate, apiDeleteInmate, apiGetInmate, apiListUFs, apiListCities } from '../api';
-import type { InmatesList, UF, City } from '../types';
+import { apiListInmates, apiCreateInmate, apiUpdateInmate, apiDeleteInmate, apiGetInmate, apiListUFs, apiListPrisonUnits } from '../api';
+import type { InmatesList, UF, PrisonUnit } from '../types';
 import Layout from '../components/Layout';
 import Button from '../components/Button';
 import Modal from '../components/Modal';
@@ -11,19 +11,21 @@ import PhoneInput from '../components/PhoneInput';
 export default function Inmates() {
   const [inmates, setInmates] = useState<InmatesList[]>([]);
   const [ufs, setUfs] = useState<UF[]>([]);
-  const [originCities, setOriginCities] = useState<City[]>([]);
-  const [destinationCities, setDestinationCities] = useState<City[]>([]);
+  const [originUnits, setOriginUnits] = useState<PrisonUnit[]>([]);
+  const [destinationUnits, setDestinationUnits] = useState<PrisonUnit[]>([]);
   const [loading, setLoading] = useState(true);
   const [modalOpen, setModalOpen] = useState(false);
   const [editingId, setEditingId] = useState<number | null>(null);
   const [formData, setFormData] = useState({
-    origin_id: 0,
+    origin_unit_id: 0,
     custody: 'CLOSED' as 'CLOSED' | 'SEMI_OPEN' | 'OPEN',
-    destination_id: 0,
+    destination_unit_ids: [] as number[],
     responsible: { attorney: '', phone: '' }
   });
+  const [selectedDestinations, setSelectedDestinations] = useState<PrisonUnit[]>([]);
   const [selectedOriginUF, setSelectedOriginUF] = useState('');
   const [selectedDestinationUF, setSelectedDestinationUF] = useState('');
+  const [pendingDestinationUnitId, setPendingDestinationUnitId] = useState(0);
   const [error, setError] = useState('');
 
   useEffect(() => {
@@ -40,21 +42,21 @@ export default function Inmates() {
     }
   };
 
-  const loadOriginCities = async (ufCode: string) => {
+  const loadOriginUnits = async (ufCode: string) => {
     try {
-      const data = await apiListCities({ uf_code: ufCode });
-      setOriginCities(data ?? []);
+      const data = await apiListPrisonUnits({ uf_code: ufCode });
+      setOriginUnits(data ?? []);
     } catch (err: any) {
-      console.error('Erro ao carregar cidades de origem:', err);
+      console.error('Erro ao carregar unidades de origem:', err);
     }
   };
 
-  const loadDestinationCities = async (ufCode: string) => {
+  const loadDestinationUnits = async (ufCode: string) => {
     try {
-      const data = await apiListCities({ uf_code: ufCode });
-      setDestinationCities(data ?? []);
+      const data = await apiListPrisonUnits({ uf_code: ufCode });
+      setDestinationUnits(data ?? []);
     } catch (err: any) {
-      console.error('Erro ao carregar cidades de destino:', err);
+      console.error('Erro ao carregar unidades de destino:', err);
     }
   };
 
@@ -73,6 +75,12 @@ export default function Inmates() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+
+    if (formData.destination_unit_ids.length === 0) {
+      setError('Adicione pelo menos uma unidade prisional de destino.');
+      return;
+    }
+
     try {
       if (editingId) {
         await apiUpdateInmate(editingId, formData);
@@ -90,22 +98,20 @@ export default function Inmates() {
   const handleEdit = async (id: number) => {
     try {
       const inmate = await apiGetInmate(id);
+      const destinations = inmate.destination_units ?? [];
+
       setEditingId(id);
       setFormData({
-        origin_id: inmate.origin_id,
+        origin_unit_id: inmate.origin_unit_id,
         custody: inmate.custody,
-        destination_id: inmate.destination_id,
+        destination_unit_ids: inmate.destination_unit_ids ?? destinations.map((unit) => unit.id),
         responsible: inmate.responsible
       });
+      setSelectedDestinations(destinations);
 
-      // Load cities for the selected UFs
-      if (inmate.origin?.uf_code) {
-        setSelectedOriginUF(inmate.origin.uf_code);
-        await loadOriginCities(inmate.origin.uf_code);
-      }
-      if (inmate.destination?.uf_code) {
-        setSelectedDestinationUF(inmate.destination.uf_code);
-        await loadDestinationCities(inmate.destination.uf_code);
+      if (inmate.origin_unit?.uf_code) {
+        setSelectedOriginUF(inmate.origin_unit.uf_code);
+        await loadOriginUnits(inmate.origin_unit.uf_code);
       }
 
       setModalOpen(true);
@@ -127,20 +133,61 @@ export default function Inmates() {
   const resetForm = () => {
     setEditingId(null);
     setFormData({
-      origin_id: 0,
+      origin_unit_id: 0,
       custody: 'CLOSED',
-      destination_id: 0,
+      destination_unit_ids: [],
       responsible: { attorney: '', phone: '' }
     });
+    setSelectedDestinations([]);
     setSelectedOriginUF('');
     setSelectedDestinationUF('');
-    setOriginCities([]);
-    setDestinationCities([]);
+    setPendingDestinationUnitId(0);
+    setOriginUnits([]);
+    setDestinationUnits([]);
   };
 
   const openCreateModal = () => {
     resetForm();
     setModalOpen(true);
+  };
+
+  const formatUnit = (unit?: PrisonUnit) =>
+    unit ? `${unit.name} (${unit.uf_code})` : 'N/A';
+
+  const formatUnits = (units?: PrisonUnit[]) => {
+    if (!units?.length) return 'N/A';
+    return units.map((unit) => formatUnit(unit)).join('; ');
+  };
+
+  const handleAddDestination = () => {
+    if (pendingDestinationUnitId <= 0) {
+      setError('Selecione uma unidade prisional de destino para adicionar.');
+      return;
+    }
+
+    if (formData.destination_unit_ids.includes(pendingDestinationUnitId)) {
+      setError('Esta unidade de destino já foi adicionada.');
+      return;
+    }
+
+    const unit = destinationUnits.find((item) => item.id === pendingDestinationUnitId);
+    if (!unit) return;
+
+    setFormData({
+      ...formData,
+      destination_unit_ids: [...formData.destination_unit_ids, pendingDestinationUnitId]
+    });
+    setSelectedDestinations([...selectedDestinations, unit]);
+    setPendingDestinationUnitId(0);
+    setError('');
+  };
+
+  const handleRemoveDestination = (unitId: number) => {
+    setFormData({
+      ...formData,
+      destination_unit_ids: formData.destination_unit_ids.filter((id) => id !== unitId)
+    });
+    setSelectedDestinations(selectedDestinations.filter((unit) => unit.id !== unitId));
   };
 
   return (
@@ -172,8 +219,8 @@ export default function Inmates() {
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>Origem</th>
-                    <th>Destino</th>
+                    <th>Unidade origem</th>
+                    <th>Unidades destino</th>
                     <th>Regime</th>
                     <th className="text-right">Ações</th>
                   </tr>
@@ -182,12 +229,8 @@ export default function Inmates() {
                   {inmates.map((inmate) => (
                     <tr key={inmate.id}>
                       <td>{inmate.id}</td>
-                      <td>
-                        {inmate.origin ? `${inmate.origin.name} - ${inmate.origin.uf_code}` : 'N/A'}
-                      </td>
-                      <td>
-                        {inmate.destination ? `${inmate.destination.name} - ${inmate.destination.uf_code}` : 'N/A'}
-                      </td>
+                      <td>{formatUnit(inmate.origin_unit)}</td>
+                      <td>{formatUnits(inmate.destination_units)}</td>
                       <td>
                         {inmate.custody === 'CLOSED' ? 'Fechado' : inmate.custody === 'SEMI_OPEN' ? 'Semiaberto' : 'Aberto'}
                       </td>
@@ -224,11 +267,11 @@ export default function Inmates() {
                   value={selectedOriginUF}
                   onChange={(e) => {
                     setSelectedOriginUF(e.target.value);
-                    setFormData({ ...formData, origin_id: 0 });
+                    setFormData({ ...formData, origin_unit_id: 0 });
                     if (e.target.value) {
-                      loadOriginCities(e.target.value);
+                      loadOriginUnits(e.target.value);
                     } else {
-                      setOriginCities([]);
+                      setOriginUnits([]);
                     }
                   }}
                   options={[
@@ -238,15 +281,15 @@ export default function Inmates() {
                   required
                 />
                 <Select
-                  label="Cidade Origem"
-                  value={formData.origin_id}
-                  onChange={(e) => setFormData({ ...formData, origin_id: Number(e.target.value) })}
+                  label="Unidade prisional origem"
+                  value={formData.origin_unit_id}
+                  onChange={(e) => setFormData({ ...formData, origin_unit_id: Number(e.target.value) })}
                   options={[
-                    { value: '0', label: 'Selecione a cidade' },
-                    ...originCities.map(city => ({ value: String(city.id), label: city.name }))
+                    { value: '0', label: 'Selecione a unidade' },
+                    ...originUnits.map(unit => ({ value: String(unit.id), label: unit.name }))
                   ]}
                   required
-                  disabled={!selectedOriginUF || originCities.length === 0}
+                  disabled={!selectedOriginUF || originUnits.length === 0}
                 />
               </div>
             </div>
@@ -263,38 +306,61 @@ export default function Inmates() {
             />
 
             <div className="form-section">
-              <h3 className="form-section-title">Destino</h3>
+              <h3 className="form-section-title">Destinos</h3>
+              <p className="text-sm text-gray-600 mb-3">
+                Adicione uma ou mais unidades prisionais de destino para este reeducando.
+              </p>
               <div className="form-grid-2">
                 <Select
                   label="UF Destino"
                   value={selectedDestinationUF}
                   onChange={(e) => {
                     setSelectedDestinationUF(e.target.value);
-                    setFormData({ ...formData, destination_id: 0 });
+                    setPendingDestinationUnitId(0);
                     if (e.target.value) {
-                      loadDestinationCities(e.target.value);
+                      loadDestinationUnits(e.target.value);
                     } else {
-                      setDestinationCities([]);
+                      setDestinationUnits([]);
                     }
                   }}
                   options={[
                     { value: '', label: 'Selecione a UF' },
                     ...ufs.map(uf => ({ value: uf.code, label: `${uf.code} - ${uf.name}` }))
                   ]}
-                  required
                 />
                 <Select
-                  label="Cidade Destino"
-                  value={formData.destination_id}
-                  onChange={(e) => setFormData({ ...formData, destination_id: Number(e.target.value) })}
+                  label="Unidade prisional destino"
+                  value={pendingDestinationUnitId}
+                  onChange={(e) => setPendingDestinationUnitId(Number(e.target.value))}
                   options={[
-                    { value: '0', label: 'Selecione a cidade' },
-                    ...destinationCities.map(city => ({ value: String(city.id), label: city.name }))
+                    { value: '0', label: 'Selecione a unidade' },
+                    ...destinationUnits.map(unit => ({ value: String(unit.id), label: unit.name }))
                   ]}
-                  required
-                  disabled={!selectedDestinationUF || destinationCities.length === 0}
+                  disabled={!selectedDestinationUF || destinationUnits.length === 0}
                 />
               </div>
+              <div className="mt-3">
+                <Button type="button" variant="secondary" onClick={handleAddDestination}>
+                  + Adicionar destino
+                </Button>
+              </div>
+
+              {selectedDestinations.length > 0 && (
+                <ul className="destination-units-list mt-4">
+                  {selectedDestinations.map((unit) => (
+                    <li key={unit.id} className="destination-units-item">
+                      <span>{formatUnit(unit)}</span>
+                      <button
+                        type="button"
+                        className="destination-units-remove"
+                        onClick={() => handleRemoveDestination(unit.id)}
+                      >
+                        Remover
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
 
             <div className="form-section">

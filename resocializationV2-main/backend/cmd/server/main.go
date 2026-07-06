@@ -34,6 +34,10 @@ import (
 	citiesRepository "github.com/jeje-gab/resocializationV2/backend/internal/collections/cities/repository"
 	citiesUseCase "github.com/jeje-gab/resocializationV2/backend/internal/collections/cities/usecase"
 
+	prisonUnitsHttp "github.com/jeje-gab/resocializationV2/backend/internal/collections/prisonunits/delivery/http"
+	prisonUnitsRepository "github.com/jeje-gab/resocializationV2/backend/internal/collections/prisonunits/repository"
+	prisonUnitsUseCase "github.com/jeje-gab/resocializationV2/backend/internal/collections/prisonunits/usecase"
+
 	matchHttp "github.com/jeje-gab/resocializationV2/backend/internal/collections/match/delivery/http"
 	matchRepository "github.com/jeje-gab/resocializationV2/backend/internal/collections/match/repository"
 	matchUseCase "github.com/jeje-gab/resocializationV2/backend/internal/collections/match/usecase"
@@ -69,6 +73,7 @@ func main() {
 	inmatesRepo := inmatesRepository.NewRepository(pool)
 	ufsRepo := ufsRepository.NewRepository(pool)
 	citiesRepo := citiesRepository.NewRepository(pool)
+	prisonUnitsRepo := prisonUnitsRepository.NewRepository(pool)
 	matchRepo := matchRepository.NewRepository(pool)
 
 	authUC := authUseCase.NewUseCase(authRepo, jwtSvc)
@@ -76,6 +81,7 @@ func main() {
 	inmatesUC := inmatesUseCase.NewUseCase(inmatesRepo)
 	ufsUC := ufsUseCase.NewUseCase(ufsRepo)
 	citiesUC := citiesUseCase.NewUseCase(citiesRepo)
+	prisonUnitsUC := prisonUnitsUseCase.NewUseCase(prisonUnitsRepo)
 	matchUC := matchUseCase.NewUseCase(matchRepo)
 
 	// HTTP
@@ -150,6 +156,7 @@ func main() {
 	inmatesHttp.RegisterInmatesRoutes(api, inmatesUC, jwtSvc.RequireRole("user", "admin")) // user e admin
 	ufsHttp.RegisterUFRoutes(api, ufsUC)
 	citiesHttp.RegisterCityRoutes(api, citiesUC)
+	prisonUnitsHttp.RegisterPrisonUnitRoutes(api, prisonUnitsUC)
 	matchHttp.RegisterMatchRoutes(api, matchUC, jwtSvc.RequireRole("user", "admin")) // user e admin
 
 	// Start

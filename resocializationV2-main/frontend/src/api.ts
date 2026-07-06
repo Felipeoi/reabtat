@@ -158,6 +158,16 @@ export const apiListUFs = async () =>
         await request<import("./types").UF[]>(`/api/ufs`, { auth: false })
     );
 
+/* PRISON UNITS */
+export const apiListPrisonUnits = async (params: { uf_code?: string } = {}) => {
+    const usp = new URLSearchParams();
+    if (params.uf_code) usp.set("uf_code", params.uf_code);
+    const q = usp.toString() ? `?${usp.toString()}` : "";
+    return ensureArray<import("./types").PrisonUnit>(
+        await request<import("./types").PrisonUnit[]>(`/api/prison-units${q}`, { auth: false })
+    );
+};
+
 /* CITIES */
 export const apiListCities = async (params: { uf_code?: string } = {}) => {
     const usp = new URLSearchParams();

@@ -344,17 +344,11 @@ a:hover {
 }
 
 .navbar-logo {
-    width: 3rem;
-    height: 3rem;
-    background: linear-gradient(135deg, var(--primary-500) 0%, var(--primary-600) 100%);
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    box-shadow: var(--shadow-green);
+    display: block;
+    height: 3.5rem;
+    width: auto;
+    max-width: 11rem;
+    object-fit: contain;
 }
 
 .navbar-title {
@@ -411,6 +405,41 @@ a:hover {
     background: var(--danger);
     color: white;
     transform: scale(1.05);
+}
+
+.destination-units-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.destination-units-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background: var(--primary-50);
+    border: 1px solid var(--primary-100);
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+}
+
+.destination-units-remove {
+    background: transparent;
+    border: none;
+    color: var(--danger);
+    font-weight: 600;
+    font-size: 0.8125rem;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.destination-units-remove:hover {
+    text-decoration: underline;
 }
 
 /* ========== Tables ========== */
@@ -589,6 +618,15 @@ a:hover {
 .auth-container {
     width: 100%;
     max-width: 28rem;
+}
+
+.auth-brand-logo {
+    display: block;
+    width: min(100%, 22rem);
+    max-height: 18rem;
+    height: auto;
+    margin: 0 auto 1.5rem;
+    object-fit: contain;
 }
 
 .auth-logo {
@@ -845,13 +883,8 @@ a:hover {
     }
 
     .navbar-logo {
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.25rem;
-    }
-
-    .navbar-title {
-        font-size: 1.25rem;
+        height: 2.75rem;
+        max-width: 9rem;
     }
 
     .navbar-links {
@@ -884,8 +917,9 @@ a:hover {
 }
 
 @media (max-width: 480px) {
-    .navbar-title {
-        display: none;
+    .navbar-logo {
+        height: 2.25rem;
+        max-width: 7rem;
     }
 
     .navbar-link span {

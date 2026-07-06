@@ -29,9 +29,12 @@ export default function Layout({ children }: LayoutProps) {
       {authenticated && (
         <nav className="navbar">
           <div className="navbar-container">
-            <Link to="/" className="navbar-brand">
-              <div className="navbar-logo">R</div>
-              <span className="navbar-title">Ressocialização · Advocacia</span>
+            <Link to="/inmates" className="navbar-brand">
+              <img
+                src="/rehabtat-logo.png"
+                alt="Rehab TaT — Reabilitação Transferência a Transferência"
+                className="navbar-logo"
+              />
             </Link>
 
             <div className="navbar-links">

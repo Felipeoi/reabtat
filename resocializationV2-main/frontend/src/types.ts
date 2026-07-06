@@ -22,6 +22,12 @@ export type City = {
     uf_code: string;
 };
 
+export type PrisonUnit = {
+    id: number;
+    name: string;
+    uf_code: string;
+};
+
 export type InmatesResponsible = {
     attorney: string;
     phone: string;
@@ -29,33 +35,32 @@ export type InmatesResponsible = {
 
 export type Inmate = {
     id: number;
-    origin_id: number;
-    origin?: City;
+    origin_unit_id: number;
+    origin_unit?: PrisonUnit;
     custody: "CLOSED" | "SEMI_OPEN" | "OPEN";
-    destination_id: number;
-    destination?: City;
+    destination_unit_ids: number[];
+    destination_units?: PrisonUnit[];
     responsible: InmatesResponsible;
 };
 
 export type InmatesList = {
     id: number;
-    origin_id: number;
-    origin?: City;
-    destination_id: number;
-    destination?: City;
+    origin_unit_id: number;
+    origin_unit?: PrisonUnit;
+    destination_unit_ids: number[];
+    destination_units?: PrisonUnit[];
     custody: string;
 };
 
 export type LoginResp = { token: string };
 export type SignupResp = { user_id: number };
 
-// Match types
 export type InmateMatchInfo = {
     id: number;
-    origin_id: number;
-    origin?: City;
-    destination_id: number;
-    destination?: City;
+    origin_unit_id: number;
+    origin_unit?: PrisonUnit;
+    destination_unit_ids: number[];
+    destination_units?: PrisonUnit[];
     custody: string;
     user_id: number;
     responsible: InmatesResponsible;
