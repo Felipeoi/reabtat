@@ -1,0 +1,68 @@
+name: resocializationv2-staging
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "28080:8080"
+    env_file:
+      - backend/.env.staging
+    depends_on:
+      - db
+      - redis
+      - mailhog
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: http://localhost:28080
+    ports:
+      - "25173:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  db:
+    image: postgres:15
+    container_name: resocializationv2-staging-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: "1212"
+      POSTGRES_DB: resocialization_v2_staging
+    ports:
+      - "25433:5432"
+    volumes:
+      - resocializationv2_staging_pgdata:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+  redis:
+    image: redis:7
+    container_name: resocializationv2-staging-redis
+    ports:
+      - "26379:6379"
+    networks:
+      - app-network
+
+  mailhog:
+    image: mailhog/mailhog:v1.0.1
+    container_name: resocializationv2-staging-mailhog
+    ports:
+      - "21025:1025"
+      - "28025:8025"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  resocializationv2_staging_pgdata:

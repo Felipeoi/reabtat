@@ -6,6 +6,7 @@ bin/
 
 # Config
 .env
+.env.staging
 
 # IDEs
 .idea/
