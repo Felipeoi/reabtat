@@ -6,6 +6,7 @@ import EditUser from './pages/EditUser';
 import Inmates from './pages/Inmates';
 import Matches from './pages/Matches';
 import MatchDetails from './pages/MatchDetails';
+import Landing from './pages/Landing';
 import NotFound from './pages/NotFound';
 import { isAuthed } from './auth';
 import { useEffect, useState } from 'react';
@@ -72,7 +73,7 @@ export default function App() {
     <Routes>
       <Route
         path="/"
-        element={<Navigate to={isAuthed() ? '/inmates' : '/login'} replace />}
+        element={isAuthed() ? <Navigate to="/inmates" replace /> : <Landing />}
       />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
